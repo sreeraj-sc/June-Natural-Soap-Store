@@ -18,23 +18,30 @@
             <form action="registration.php" method="POST">
                 <label for="name">Your name</label><br>
                 <input type="text" value="first name" id="fname">
-                <input type="text" value="last name" id="lname"><br>
+                <input type="text" value="last name" id="lname" class="m-3"><br><br>
                 <label for="phnumber">Mobile number</label><br>
                 <select name="Contry Code" id="contry-code">
                     <option value="+91">+91 (india)</option>
                     <option value="+1">+1 (USA)</option>
                     <option value="+44">+44 (UK)</option>
                 </select>
-                <input type="number" value="mobile number" id="phnumber"><br>
+                <input type="number" value="mobile number" id="phnumber" name="mobile" class="m-3"><br><br>
                 <label for="email">E-mail</label><br>
-                <input type="email" value="mail id" id="email"><br>
+                <input type="email" value="mail id" id="email"><br><br> 
                 <label for="password">password</label><br>
                 <input type="password" name="password" id="password" value="include "><br>
                 <p>| password must be at least 6 characters</p>
                 <input type="submit" value="continue" class="submit">
             </form>
+            <hr>
+            <p>Already have an account ? <a href="login.html">Sign in ></a></p>
         </div>
     </div>
+    <footer>
+      <p class="footer-font"><a href="terms.html" class="footer-font">Terms and conditions</a></p>
+      <p class="footer-font"><a href="contact.html" class="footer-font">Contact Us</a></p>
+      <p class="footer-font"><a href="donate.html" class="footer-font">Donate us through github</a></p>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
   </body>
 </html>
