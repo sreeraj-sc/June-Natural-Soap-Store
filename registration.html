@@ -14,8 +14,8 @@
         <div class="col">
           <img src="images/June-logo-1.png" alt="Logo">
         </div>
-        <div class="col reg-div">
-          <div class="m-5 reg p-5">
+        <div class="col reg-div d-flex justify-content-center align-items-center mt-xxl-4" style="height: 100vh;">
+          <div class="reg p-5">
             <h4>Create an account</h4>
             <form action="registration.php" method="post">
               <label for="name">Name</label><br>
@@ -29,10 +29,16 @@
               <input type="number" id="mobile-number"><br><br>
               <label for="email">Email</label><br>
               <input type="email" id="email" value="email"><br><br>
+              <label for="date-of-birth">Date Of Birth</label><br>
+              <input type="date" id="dob"><br><br>
               <label for="password">Password</label><br>
-              <input type="password" id="password" value="include atleast 6 characters"><br>
-              <p>| password must be at least 6 characters</p><br>
-              <input type="submit" value="submit">
+              <input type="text" id="password" value="include atleast 6 characters"><br>
+              <p>| password must be at least 6 characters</p>
+              <label for="cun-password">Confirm password</label><br>
+              <input type="text" id="cun-password" value="cunfirm password"><br><br>
+              <div class="d-flex justify-content-center align-items-center">
+                <input type="submit" value="submit">
+              </div>
             </form>
           </div>
         </div>
