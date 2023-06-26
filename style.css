@@ -19,3 +19,8 @@ footer
 {
     background-image: linear-gradient(to bottom,#3385ff, #2d2aeb);
 }
+.custom-input
+{
+    color: #999999;
+    border-radius: 15px;
+}
