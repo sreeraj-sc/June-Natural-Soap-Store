@@ -23,4 +23,18 @@ footer
 {
     color: #999999;
     border-radius: 15px;
+    border-width: 0;
+    border-color: transparent;
+}
+h4
+{
+    font-weight: 700;
+}
+.submit
+{
+    border-radius: 10vh;
+    border-width: 0;
+    border-color: transparent;
+    width: 50%;
+    box-sizing: content-box;
 }
