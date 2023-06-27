@@ -19,7 +19,7 @@ body
 }
 h4
 {
-    font-weight: 700;
+    font-weight: 600;
 }
 .submit
 {
@@ -44,14 +44,4 @@ a
 .content
 {
     font-size: 3vh;
-}
-.reg-div 
-{
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-}
-section
-{
-    min-height: 100hv;
 }
