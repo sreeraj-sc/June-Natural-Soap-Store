@@ -1,0 +1,23 @@
+body
+{
+    background: linear-gradient(to bottom,#3385ff, #2d2aeb);
+    font-family: monospace;
+    color: #ffffff;
+    height: 100vh;
+}
+a
+{
+    text-decoration: none;
+    color: #ffffff;
+}
+.title
+{
+    color: #ffffff;
+    font-family: sans-serif;
+    font-weight: 800;
+    font-size: 150%;
+}
+.navbar
+{
+    background-color: #3385ff;
+}
