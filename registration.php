@@ -13,9 +13,23 @@
     $pass = $_POST['password'];
 
     $conn = new mysqli($dbhost, $dbuser, $dbpass, $dbname);
-    if(conn->connect_error)
+    if($conn->connect_error)
+    {
+        die("connection error".$conn->connect_error);
+    }
+    else
     {
         echo "connection successful";
-        $sql = "INSERT INTO TABLE user_credentials (first_name, last_name, contry_code, mobile_number, email, date_of_birth, password) VALUES ('$first_name', '$last_name, '$contry_code', '$mobile_number', '$email', '$date_of_birth', '$pass')";
-    }   
+        $sql = "INSERT INTO user_credentials(first_name, last_name, contry_code, mobile_number, email, date_of_birth, passphrase) VALUES ('$first_name', '$last_name, '$contry_code', '$mobile_number', '$email', '$date_of_birth', '$pass')";
+        $result = mysqli_query($conn, $sql);
+        if($result)
+        {
+            echo "registration successfull";
+        }
+        else
+        {
+            echo "failed";
+        }
+    }
+    $conn->close();
 ?>
