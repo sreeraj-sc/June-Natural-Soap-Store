@@ -19,12 +19,11 @@
     }
     else
     {
-        echo "connection successful";
-        $sql = "INSERT INTO user_credentials(first_name, last_name, contry_code, mobile_number, email, date_of_birth, passphrase) VALUES ('$first_name', '$last_name, '$contry_code', '$mobile_number', '$email', '$date_of_birth', '$pass')";
-        $result = mysqli_query($conn, $sql);
-        if($result)
+        $sql = "INSERT INTO user_credentials(first_name, last_name, contry_code, mobile_number, email, date_of_birth, passphrase) VALUES ('$first_name', '$last_name', '$contry_code', '$mobile_number', '$email', '$date_of_birth', '$pass')";
+        if($conn->query($sql) === TRUE)
         {
-            echo "registration successfull";
+            header("Location: index.html");
+            exit();
         }
         else
         {
