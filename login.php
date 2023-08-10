@@ -12,6 +12,15 @@
     {
         $email_number = $_POST['email-number'];
         $passphrase = $_POST['password'];
-        $sql = "SELECT * FROM user_credentials WHERE email='$email_number' AND mobile_number='$email_number'";
+        $sql = "SELECT * FROM user_credentials WHERE email='$email_number' OR mobile_number='$email_number'";
+        $res = $conn->query($sql);
+        if($res == TRUE)
+        {
+            header("Location: index.html");
+        }
+        else
+        {
+            echo "User not Found ";
+        }
     }
 ?>
