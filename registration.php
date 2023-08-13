@@ -11,6 +11,7 @@
     $email = $_POST['email'];
     $date_of_birth = $_POST['dob'];
     $pass = $_POST['password'];
+    $pass_con = $_POST['con-password'];
 
     $conn = new mysqli($dbhost, $dbuser, $dbpass, $dbname);
     if($conn->connect_error)
@@ -19,16 +20,25 @@
     }
     else
     {
-        $sql = "INSERT INTO user_credentials(first_name, last_name, contry_code, mobile_number, email, date_of_birth, passphrase) VALUES ('$first_name', '$last_name', '$contry_code', '$mobile_number', '$email', '$date_of_birth', '$pass')";
-        if($conn->query($sql) === TRUE)
+        if($pass == $pass_con)
         {
-            header("Location: index.html");
-            exit();
+            $pass_hashed = password_hash($pass, PASSWORD_DEFAULT);
+            $sql = "INSERT INTO user_credentials(first_name, last_name, contry_code, mobile_number, email, date_of_birth, passphrase) VALUES ('$first_name', '$last_name', '$contry_code', '$mobile_number', '$email', '$date_of_birth', '$pass_hashed')";
+            if($conn->query($sql) === TRUE)
+            {
+                header("Location: index.html");
+                exit();
+            }
+            else
+            {
+                echo "failed";
+            }
         }
         else
         {
-            echo "failed";
+            echo "password incorrect";
         }
+        
     }
     $conn->close();
 ?>
