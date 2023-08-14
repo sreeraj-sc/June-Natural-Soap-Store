@@ -22,7 +22,7 @@
     {
         if($pass == $pass_con)
         {
-            $pass_hashed = password_hash($pass, PASSWORD_DEFAULT);
+            $pass_hashed = md5($pass);
             $sql = "INSERT INTO user_credentials(first_name, last_name, contry_code, mobile_number, email, date_of_birth, passphrase) VALUES ('$first_name', '$last_name', '$contry_code', '$mobile_number', '$email', '$date_of_birth', '$pass_hashed')";
             if($conn->query($sql) === TRUE)
             {
