@@ -10,22 +10,29 @@
     }
     else
     {
-        $email_number = $_POST['email-number'];
+        $email_num = $_POST['email-number'];
         $passphrase = $_POST['password'];
         $hash_pass = md5($passphrase);
-        $sql = "SELECT * FROM user_credentials WHERE email='$email_number' OR mobile_number='$email_number'";
-        $res = $conn->query($sql);
-        if($res == TRUE)
+        $sql = "SELECT * FROM user_credentials WHERE email = ?";
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("s", $email_num);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        if($result->num_rows > 0)
         {
-            $val = mysqli_num_rows($res);
-            if($val >0)
+            $data = $result->fetch_assoc();
+            if($data['passphrase'] == $hash_pass)
             {
                 header("Location: index.html");
+            }
+            else
+            {
+                echo "Invalid Username or password !!!";
             }
         }
         else
         {
-            echo "User not Found ";
+            echo "User not Found";
         }
     }
 ?>
