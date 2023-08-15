@@ -1,4 +1,5 @@
 <?php
+    session_start();
     $host = "localhost";
     $user = "root";
     $pass = "root";
@@ -23,7 +24,7 @@
             $data = $result->fetch_assoc();
             if($data['passphrase'] == $hash_pass)
             {
-                header("Location: index.html");
+                header("Location: home.php");
             }
             else
             {

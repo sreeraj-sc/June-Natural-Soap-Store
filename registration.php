@@ -1,4 +1,5 @@
 <?php
+    session_start();
     $dbhost = "localhost";
     $dbuser = "root";
     $dbpass = "root";
@@ -26,7 +27,7 @@
             $sql = "INSERT INTO user_credentials(first_name, last_name, contry_code, mobile_number, email, date_of_birth, passphrase) VALUES ('$first_name', '$last_name', '$contry_code', '$mobile_number', '$email', '$date_of_birth', '$pass_hashed')";
             if($conn->query($sql) === TRUE)
             {
-                header("Location: index.html");
+                header("Location: home.php");
                 exit();
             }
             else
