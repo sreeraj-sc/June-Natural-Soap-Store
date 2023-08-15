@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Aug 09, 2023 at 07:33 PM
+-- Generation Time: Aug 15, 2023 at 06:03 PM
 -- Server version: 10.11.4-MariaDB-1
 -- PHP Version: 8.2.7
 
@@ -42,7 +42,14 @@ CREATE TABLE `user_credentials` (
 --
 
 INSERT INTO `user_credentials` (`first_name`, `last_name`, `contry_code`, `mobile_number`, `email`, `date_of_birth`, `passphrase`) VALUES
-('sreeraj', 's', '+91', '8848066068', 'sreerajsc5@gmail.com', '2003-12-19', 'hello');
+('sreeraj', 's', '+91', '8848066068', 'sreerajsc5@gmail.com', '2003-12-19', 'hello'),
+('hello', 'ugwsd', '+91', '3425346545365', 'emaildfsdgdsgf@gmail.com', '2023-08-24', 'rr'),
+('sreera', 's', '+91', '34444334', 'sreer@gmail.com', '2023-08-16', 'adfsd'),
+('sreeraj', 's', '+91', '666', 'sreerajsc5+plex@gmail.com', '2023-08-25', 'hello'),
+('s', 's', '+91', '23443223', 'sreeraj.s.c.vfc@gmail.com', '2023-08-17', '03c7c0ace395d80182db07ae2c30f034'),
+('sreeraj', 's', '+91', '3456464', 'sreerajsc5@gmail.com', '2023-08-03', '3691308f2a4c2f6983f2880d32e29c84'),
+('hello', 's', '+91', '1234', 'remo@gmail.com', '2023-08-03', '3691308f2a4c2f6983f2880d32e29c84'),
+('hello', 's', '+91', '1234', 'remo@gmail.com', '2023-08-03', '3691308f2a4c2f6983f2880d32e29c84');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
