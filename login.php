@@ -24,6 +24,8 @@
             $data = $result->fetch_assoc();
             if($data['passphrase'] == $hash_pass)
             {
+                $_SESSION['username'] = $data['first_name'];
+                $_SESSION['mobile'] = $data['mobile_number'];
                 header("Location: home.php");
             }
             else
