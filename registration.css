@@ -45,10 +45,11 @@ a
 {
     font-size: 2vh;
 }
-input:invalid {
+input:invalid 
+{
     border-color: red;
-  }
-  
-  input:valid {
+}  
+  input:valid 
+{
     border-color: green;
-  }
+}
