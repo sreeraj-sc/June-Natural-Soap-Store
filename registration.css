@@ -45,3 +45,10 @@ a
 {
     font-size: 2vh;
 }
+input:invalid {
+    border-color: red;
+  }
+  
+  input:valid {
+    border-color: green;
+  }

@@ -4,19 +4,7 @@ body
     font-family: monospace;
     color: #ffffff;
     height: 100vh;
-}
-a
-{
-    text-decoration: none;
-    color: #ffffff;
-}
-.title
-{
-    color: #ffffff;
-    font-family: sans-serif;
-    font-weight: 800;
-    font-size: 10px;
-}
+}   
 .bar
 {
     background-color: #3385ff;
@@ -25,3 +13,49 @@ a
 {
     position:relative;
 }
+input.search_input
+{
+    color: aqua;
+}
+.gallery-container
+{
+    width: 100%;
+    overflow: hidden;
+}
+.gallery
+{
+    display: flex;
+    animation: scrollGallery 2s linear infinite;
+}
+.gallery img
+{
+    max-width: 100%;
+    height: auto;
+    margin-right: 20px;
+}
+@keyframes scrollGallery
+{
+    0%
+    {
+        transform: translateX(0);
+    }
+    100%
+    {
+        transform: translateX(-100%);
+    }
+}
+.feet
+{
+    background-color: #ffffff;
+}
+.dropdown
+{
+    color: #ffffff;
+}
+input:invalid {
+    border-color: red;
+  }
+  
+  input:valid {
+    border-color: green;
+  }
