@@ -25,12 +25,12 @@ input.search_input
 .gallery
 {
     display: flex;
-    animation: scrollGallery 2s linear infinite;
+    animation: scrollGallery 20s linear infinite;
 }
 .gallery img
 {
     max-width: 100%;
-    height: auto;
+    height: 300px;
     margin-right: 20px;
 }
 @keyframes scrollGallery
@@ -52,10 +52,18 @@ input.search_input
 {
     color: #ffffff;
 }
-input:invalid {
+input:invalid 
+{
     border-color: red;
-  }
+}
   
-  input:valid {
+input:valid 
+{
     border-color: green;
-  }
+}
+.title
+{
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 800;
+}
