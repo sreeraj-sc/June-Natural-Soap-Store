@@ -1,0 +1,69 @@
+body
+{
+    background: linear-gradient(to bottom,#3385ff, #2d2aeb);
+    font-family: monospace;
+    color: #ffffff;
+    height: 100vh;
+}   
+.bar
+{
+    background-color: #3385ff;
+}
+.left-icon-holder 
+{
+    position:relative;
+}
+input.search_input
+{
+    color: aqua;
+}
+.gallery-container
+{
+    width: 100%;
+    overflow: hidden;
+}
+.gallery
+{
+    display: flex;
+    animation: scrollGallery 20s linear infinite;
+}
+.gallery img
+{
+    max-width: 100%;
+    height: 300px;
+    margin-right: 20px;
+}
+@keyframes scrollGallery
+{
+    0%
+    {
+        transform: translateX(0);
+    }
+    100%
+    {
+        transform: translateX(-100%);
+    }
+}
+.feet
+{
+    background-color: #ffffff;
+}
+.dropdown
+{
+    color: #ffffff;
+}
+input:invalid 
+{
+    border-color: red;
+}
+  
+input:valid 
+{
+    border-color: green;
+}
+.title
+{
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 800;
+}
