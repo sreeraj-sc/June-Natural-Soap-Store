@@ -6,7 +6,7 @@
     <title>June-login</title>
     <link rel="icon" href="images/June-logo-3.png" type="image/png" sizes="16x16">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <link rel="stylesheet" href="index.css" type="text/css">
+    <link rel="stylesheet" href="style/style.css" type="text/css">
 </head>
 <body>
     <section class="container-fluid">
@@ -17,18 +17,19 @@
                 <div class="log p-5 m-5">
                     <h4>Log in</h4>
                     <hr>
-                    <form action="login.php" method="post">
+                    <form action="" method="post">
                         <label for="email">Email</label><br>
                         <input type="text" id="email-number" name="email-number" placeholder="email" class="custom-input"><br><br>
                         <label for="password">Password</label><br>
-                        <input type="text" id="password" name="password" placeholder="password" class="custom-input"><br><br><br>
+                        <input type="text" id="password" name="password" placeholder="password" class="custom-input"><br><br>
+                        <p id="invalid_user_password"></p>
                         <div class="d-flex justify-content-center align-items-center">
-                            <input type="submit" value="submit" class="submit">
+                            <input type="submit" value="submit" class="submit" name="submit">
                         </div>
                     </form>
                 </div>
                 <div class="d-flex justify-content-center align-items-center">
-                    <p>Don't have an account? <a href="registration.html"><strong>Sign Up</strong></a></p>
+                    <p>Don't have an account? <a href="registration.php"><strong>Sign Up</strong></a></p>
                 </div>
             </div>
         </div>
@@ -36,3 +37,38 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 </body>
 </html>
+<?php
+    if(isset($_POST['submit']))
+    {
+        include('db_connection.php');
+        $email_num = $_POST['email-number'];
+        $passphrase = $_POST['password'];
+        $hash_pass = md5($passphrase);
+        $sql = "SELECT * FROM user_credentials WHERE email = ?";
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("s", $email_num);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        if($result->num_rows > 0)
+        {
+            $data = $result->fetch_assoc();
+            if($data['passphrase'] == $hash_pass)
+            {
+                $_SESSION['username'] = $data['first_name'];
+                $_SESSION['mobile'] = $data['mobile_number'];
+                header("Location: home.php");
+            }
+            else
+            {
+                echo '<script src="script/script.js"></script>';
+                echo '<script type="text/javascript">invalid_user_pass();</script>';
+            }
+        }
+        else
+        {
+            echo '<script src="/script/script.js"></script>';
+            echo '<script type="text/javascript">user_notfound();</script>';
+        }
+        $conn->close();
+    }
+?>

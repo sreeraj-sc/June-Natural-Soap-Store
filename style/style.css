@@ -1,0 +1,65 @@
+body
+{
+    background: linear-gradient(to bottom,#3385ff, #2d2aeb);
+    font-family: monospace;
+    color: #ffffff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+h1
+{
+    font-weight: 500;
+}
+a
+{
+    text-decoration: none;
+    color: #ffffff;
+}
+.title
+{
+    color: #ffffff;
+    font-family: sans-serif;
+    font-weight: 800;
+    font-size: 12vh;
+}
+p
+{
+    padding-top: 0%;
+}
+.log
+{
+    border-radius: 5%;
+    background-color: #3385ff;
+}
+.submit
+{
+    border-radius: 10vh;
+    border-width: 0;
+    border-color: transparent;
+    width: 50%;
+    box-sizing: content-box;
+}
+.custom-input
+{
+    color: #999999;
+    border-radius: 15px;
+    border-width: 0;
+    border-color: transparent;
+}
+h4
+{
+    font-weight: bold;
+}
+.content
+{
+    font-size: 2vh;
+}
+.reg
+{
+    background-color: #3385ff;
+    border-radius: 5%;
+}
