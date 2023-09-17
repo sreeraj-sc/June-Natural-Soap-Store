@@ -1,0 +1,72 @@
+body
+{
+    background: linear-gradient(to bottom,#3385ff, #2d2aeb);
+    font-family: monospace;
+    color: #ffffff;
+    height: 100vh;
+    display: block;
+    background-color: #f0f0f0;
+}
+h1
+{
+    font-weight: 500;
+}
+a
+{
+    text-decoration: none;
+    color: #ffffff;
+}
+.title
+{
+    color: #ffffff;
+    font-family: sans-serif;
+    font-weight: 800;
+    font-size: 5vh;
+}
+p
+{
+    padding-top: 0%;
+}
+.log
+{
+    border-radius: 5%;
+    background-color: #3385ff;
+}
+h4
+{
+    font-weight: bold;
+}
+.content
+{
+    font-size: 2vh;
+}
+.reg
+{
+    background-color: #3385ff;
+    border-radius: 5%;
+}
+li
+{
+    margin-left: 37%;
+}
+.floating-search-bar 
+{
+    position: fixed;
+    top: 11%;
+    background-color: transparent;
+    padding: 10px;
+    width: 70%;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.form-inline .form-control
+{
+    width: 80%;
+    margin-bottom: 10px;
+}
+.form-inline .btn 
+{
+    width: 80%;
+}
