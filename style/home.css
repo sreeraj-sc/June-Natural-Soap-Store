@@ -71,7 +71,7 @@ li
     width: 80%;
 }
 .navbar {
-    background-color: #000;
+    background-color: #2d2aeb;
   }
   
   .navbar-brand {
@@ -101,18 +101,8 @@ li
     background-color: #333;
   }
   
-  .form-control {
-    width: 100%;
+.form-control 
+{
     border-color: #fff;
-  }
-  
-  .btn-outline-success {
-    color: #fff;
-    border-color: #fff;
-  }
-  
-  .btn-outline-success:hover {
-    background-color: #fff;
-    color: #000;
-  }
-  
+    border-radius: 100px;
+}
