@@ -70,3 +70,49 @@ li
 {
     width: 80%;
 }
+.navbar {
+    background-color: #000;
+  }
+  
+  .navbar-brand {
+    color: #fff;
+  }
+  
+  .navbar-nav .nav-link {
+    color: #fff;
+  }
+  
+  .navbar-nav .nav-link:active,
+  .navbar-nav .nav-link:hover {
+    color: #fff;
+    background-color: #333;
+  }
+  
+  .dropdown-menu {
+    background-color: #fff;
+  }
+  
+  .dropdown-item {
+    color: #000;
+  }
+  
+  .dropdown-item:hover {
+    color: #fff;
+    background-color: #333;
+  }
+  
+  .form-control {
+    width: 100%;
+    border-color: #fff;
+  }
+  
+  .btn-outline-success {
+    color: #fff;
+    border-color: #fff;
+  }
+  
+  .btn-outline-success:hover {
+    background-color: #fff;
+    color: #000;
+  }
+  
