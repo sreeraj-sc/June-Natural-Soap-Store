@@ -1,6 +1,6 @@
 body
 {
-    background: linear-gradient(to bottom,#3385ff, #2d2aeb);
+    background: #fff;
     font-family: monospace;
     color: #ffffff;
     height: 100vh;
@@ -27,11 +27,6 @@ p
 {
     padding-top: 0%;
 }
-.log
-{
-    border-radius: 5%;
-    background-color: #3385ff;
-}
 h4
 {
     font-weight: bold;
@@ -39,11 +34,6 @@ h4
 .content
 {
     font-size: 2vh;
-}
-.reg
-{
-    background-color: #3385ff;
-    border-radius: 5%;
 }
 li
 {
@@ -70,11 +60,7 @@ li
 {
     width: 80%;
 }
-.navbar {
-    background-color: #2d2aeb;
-  }
-  
-  .navbar-brand {
+.navbar-brand {
     color: #fff;
   }
   
@@ -107,5 +93,35 @@ li
     border-radius: 100px;
 }
 .carousel-inner {
-    height: 300px;
+    height: 400px;
   }
+  .card-body
+  {
+    color: aqua;
+  }
+  .card
+  {
+    margin-left: 10px;
+  }
+  .footer
+  {
+    background-color: #ede9e9;
+    color: #000;
+  }
+  .facebook{
+    width: 12%;
+    height: 12%;
+}
+.github{
+    width: 29%;
+    height: 29%;
+}
+.instagram{
+    width: 14%;
+    height: 14%;
+}
+.twitter{
+    width: 17%;
+    height: 17%;
+    margin-left: 6%;
+}

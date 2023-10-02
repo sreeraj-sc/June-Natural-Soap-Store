@@ -4,110 +4,68 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-  <link rel="stylesheet" href="style/home.css" type="text/css">
-  <link rel="icon" href="images/June-logo-3.png" type="image/png" sizes="16x16">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <style>
+    .ecommerce-gallery-main-img {
+  max-width: 50vh;
+  max-height: 60vh;
+}
+
+.ecommerce-gallery-thumb {
+  max-width: 20vh;
+  max-height: 20vh;
+}
+
+  </style>
 </head>
 <body>
-  <!-- Carousel wrapper -->
-<div
-  id="carouselBasicExample"
-  class="carousel slide carousel-fade"
-  data-mdb-ride="carousel"
->
-  <!-- Indicators -->
-  <div class="carousel-indicators">
-    <button
-      type="button"
-      data-mdb-target="#carouselBasicExample"
-      data-mdb-slide-to="0"
-      class="active"
-      aria-current="true"
-      aria-label="Slide 1"
-    ></button>
-    <button
-      type="button"
-      data-mdb-target="#carouselBasicExample"
-      data-mdb-slide-to="1"
-      aria-label="Slide 2"
-    ></button>
-    <button
-      type="button"
-      data-mdb-target="#carouselBasicExample"
-      data-mdb-slide-to="2"
-      aria-label="Slide 3"
-    ></button>
-  </div>
-
-  <!-- Inner -->
-  <div class="carousel-inner">
-    <!-- Single item -->
-    <div class="carousel-item active">
-      <img
-        src="slide_show/image1.jpg"
-        class="d-block w-100"
-        alt="Sunset Over the City"
-      />
-      <div class="carousel-caption d-none d-md-block">
-        <h5>First slide label</h5>
-        <p>
-          Nulla vitae elit libero, a pharetra augue mollis interdum.
-        </p>
+<div class="ecommerce-gallery" data-mdb-zoom-effect="true" data-mdb-auto-height="true">
+  <div class="row py-3 shadow-5">
+    <div class="col-12 mb-1">
+      <div class="lightbox">
+        <img
+          src="soap/Snapchat-506861195.jpg"
+          alt="Gallery image 1"
+          class="ecommerce-gallery-main-img active w-100 rounded "
+        />
       </div>
     </div>
-
-    <!-- Single item -->
-    <div class="carousel-item">
+    <div class="col-3 mt-1">
       <img
-        src="slide_show/image2.jpg"
-        class="d-block w-100"
-        alt="Canyon at Nigh"
+        src="soap/Snapchat-85506643.jpg"
+        data-mdb-img="soap/Snapchat-85506643.jpg"
+        alt="Gallery image 1"
+        class="active w-100 rounded ecommerce-gallery-thumb"
       />
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Second slide label</h5>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        </p>
-      </div>
     </div>
-
-    <!-- Single item -->
-    <div class="carousel-item">
+    <div class="col-3 mt-1">
       <img
-        src="slide_show/image3.jpg"
-        class="d-block w-100"
-        alt="Cliff Above a Stormy Sea"
+        src="soap/Snapchat-600397175.jpg"
+        data-mdb-img="soap/Snapchat-600397175.jpg"
+        alt="Gallery image 2"
+        class="w-100 rounded ecommerce-gallery-thumb"
       />
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Third slide label</h5>
-        <p>
-          Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-        </p>
-      </div>
+    </div>
+    <div class="col-3 mt-1">
+      <img
+        src="soap/Snapchat-666316410.jpg"
+        data-mdb-img="soap/Snapchat-666316410.jpg"
+        alt="Gallery image 3"
+        class="w-100 rounded ecommerce-gallery-thumb"
+      />
+    </div>
+    <div class="col-3 mt-1">
+      <img
+        src="soap/Snapchat-859494346.jpg"
+        data-mdb-img="soap/Snapchat-859494346.jpg"
+        alt="Gallery image 4"
+        class="w-100 rounded float-left ecommerce-gallery-thumb"
+      />
     </div>
   </div>
-  <!-- Inner -->
-
-  <!-- Controls -->
-  <button
-    class="carousel-control-prev"
-    type="button"
-    data-mdb-target="#carouselBasicExample"
-    data-mdb-slide="prev"
-  >
-  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button
-    class="carousel-control-next"
-    type="button"
-    data-mdb-target="#carouselBasicExample"
-    data-mdb-slide="next"
-  >
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
 </div>
-<!-- Carousel wrapper -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body>
 </html>
