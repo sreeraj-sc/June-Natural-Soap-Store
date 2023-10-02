@@ -106,3 +106,6 @@ li
     border-color: #fff;
     border-radius: 100px;
 }
+.carousel-inner {
+    height: 300px;
+  }
