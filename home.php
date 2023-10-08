@@ -227,7 +227,7 @@
                 <li class="glide__slide">
                   <div class="product">
                     <div class="product__header">
-                      <img src="/images/products/updates/soap1.jpg" alt="product">
+                      <img src="./images/products/soap/product3.jpg" alt="product">
                     </div>
                     <div class="product__footer">
                       <h3>Glycerin Honey</h3>
@@ -281,7 +281,7 @@
                 <li class="glide__slide">
                   <div class="product">
                     <div class="product__header">
-                      <img src="/images/products/updates/soap2.jpg" alt="product">
+                      <img src="./images/products/soap/product5.jpg" alt="product">
                     </div>
                     <div class="product__footer">
                       <h3>Goat Milk with Honey</h3>
@@ -335,7 +335,7 @@
                 <li class="glide__slide">
                   <div class="product">
                     <div class="product__header">
-                      <img src="/images/products/updates/soap3.jpg" alt="product">
+                      <img src="./images/products/soap/product6.jpg" alt="product">
                     </div>
                     <div class="product__footer">
                       <h3>Tie Dye</h3>
@@ -389,7 +389,7 @@
                 <li class="glide__slide">
                   <div class="product">
                     <div class="product__header">
-                      <img src="/images/products/updates/soap4.jpg" alt="product">
+                      <img src="./images/products/soap/product1.jpg" alt="product">
                     </div>
                     <div class="product__footer">
                       <h3>Organic Coffee & Neem</h3>
@@ -443,7 +443,7 @@
                 <li class="glide__slide">
                   <div class="product">
                     <div class="product__header">
-                      <img src="/images/products/updates/soap1.jpg" alt="product">
+                      <img src="./images/products/soap/product2.jpg" alt="product">
                     </div>
                     <div class="product__footer">
                       <h3>Organic Lemon</h3>
@@ -497,7 +497,7 @@
                 <li class="glide__slide">
                   <div class="product">
                     <div class="product__header">
-                      <img src="/images/products/updates/soap2.jpg" alt="product">
+                      <img src="./images/products/soap/product3.jpg" alt="product">
                     </div>
                     <div class="product__footer">
                       <h3>Pure Mint</h3>
@@ -551,7 +551,7 @@
                 <li class="glide__slide">
                   <div class="product">
                     <div class="product__header">
-                      <img src="/images/products/updates/soap3.jpg" alt="product">
+                      <img src="./images/products/soap/product4.jpg" alt="product">
                     </div>
                     <div class="product__footer">
                       <h3>Natural Rose</h3>
@@ -605,7 +605,7 @@
                 <li class="glide__slide">
                   <div class="product">
                     <div class="product__header">
-                      <img src="/images/products/updates/soap4.jpg" alt="product">
+                      <img src="./images/products/soap/product5.jpg" alt="product">
                     </div>
                     <div class="product__footer">
                       <h3>Coconut Milk</h3>
@@ -659,7 +659,7 @@
                 <li class="glide__slide">
                   <div class="product">
                     <div class="product__header">
-                      <img src="/images/products/updates/soap1.jpg" alt="product">
+                      <img src="./images/products/soap/product6.jpg" alt="product">
                     </div>
                     <div class="product__footer">
                       <h3>Coconut Milk</h3>
