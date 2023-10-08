@@ -193,7 +193,7 @@
             <div class="collection__content">
               <div class="collection__data">
                 <span>New Colors Introduced</span>
-                <h1>Soap</h1>
+                <h1>Pure Mint</h1>
                 <a href="#shop">SHOP NOW</a>
               </div>
             </div>
@@ -205,7 +205,7 @@
             <div class="collection__content">
               <div class="collection__data">
                 <span>New Flavours</span>
-                <h1>Soap</h1>
+                <h1>Coffee & Neem</h1>
                 <a href="#">SHOP NOW</a>
               </div>
             </div>
@@ -227,10 +227,10 @@
                 <li class="glide__slide">
                   <div class="product">
                     <div class="product__header">
-                      <img src="/images/products/iPhone/iphone6.jpeg" alt="product">
+                      <img src="/images/products/updates/soap1.jpg" alt="product">
                     </div>
                     <div class="product__footer">
-                      <h3>Apple iPhone 11</h3>
+                      <h3>Glycerin Honey</h3>
                       <div class="rating">
                         <svg>
                           <use xlink:href="./images/sprite.svg#icon-star-full"></use>
@@ -249,7 +249,7 @@
                         </svg>
                       </div>
                       <div class="product__price">
-                        <h4>$750</h4>
+                        <h4>750rs</h4>
                       </div>
                       <a href="#"><button type="submit" class="product__btn">Add To Cart</button></a>
                     </div>
@@ -281,10 +281,10 @@
                 <li class="glide__slide">
                   <div class="product">
                     <div class="product__header">
-                      <img src="/images/products/sumsung/samsung5.jpeg" alt="product">
+                      <img src="/images/products/updates/soap2.jpg" alt="product">
                     </div>
                     <div class="product__footer">
-                      <h3>Samsung Galaxy</h3>
+                      <h3>Goat Milk with Honey</h3>
                       <div class="rating">
                         <svg>
                           <use xlink:href="./images/sprite.svg#icon-star-full"></use>
@@ -303,7 +303,7 @@
                         </svg>
                       </div>
                       <div class="product__price">
-                        <h4>$900</h4>
+                        <h4>100rs</h4>
                       </div>
                       <a href="#"><button type="submit" class="product__btn">Add To Cart</button></a>
                     </div>
@@ -335,10 +335,10 @@
                 <li class="glide__slide">
                   <div class="product">
                     <div class="product__header">
-                      <img src="/images/products/headphone/headphone4.jpeg" alt="product">
+                      <img src="/images/products/updates/soap3.jpg" alt="product">
                     </div>
                     <div class="product__footer">
-                      <h3>Sony WH-CH510</h3>
+                      <h3>Tie Dye</h3>
                       <div class="rating">
                         <svg>
                           <use xlink:href="./images/sprite.svg#icon-star-full"></use>
@@ -357,7 +357,7 @@
                         </svg>
                       </div>
                       <div class="product__price">
-                        <h4>$600</h4>
+                        <h4>50rs</h4>
                       </div>
                       <a href="#"><button type="submit" class="product__btn">Add To Cart</button></a>
                     </div>
@@ -389,10 +389,10 @@
                 <li class="glide__slide">
                   <div class="product">
                     <div class="product__header">
-                      <img src="/images/products/sumsung/samsung3.jpeg" alt="product">
+                      <img src="/images/products/updates/soap4.jpg" alt="product">
                     </div>
                     <div class="product__footer">
-                      <h3>Samsung Galaxy</h3>
+                      <h3>Organic Coffee & Neem</h3>
                       <div class="rating">
                         <svg>
                           <use xlink:href="./images/sprite.svg#icon-star-full"></use>
@@ -411,7 +411,7 @@
                         </svg>
                       </div>
                       <div class="product__price">
-                        <h4>$850</h4>
+                        <h4>50rs</h4>
                       </div>
                       <a href="#"><button type="submit" class="product__btn">Add To Cart</button></a>
                     </div>
@@ -443,10 +443,10 @@
                 <li class="glide__slide">
                   <div class="product">
                     <div class="product__header">
-                      <img src="./images/products/iPhone/iphone2.jpeg" alt="product">
+                      <img src="/images/products/updates/soap1.jpg" alt="product">
                     </div>
                     <div class="product__footer">
-                      <h3>Apple iPhone 11</h3>
+                      <h3>Organic Lemon</h3>
                       <div class="rating">
                         <svg>
                           <use xlink:href="./images/sprite.svg#icon-star-full"></use>
@@ -465,7 +465,7 @@
                         </svg>
                       </div>
                       <div class="product__price">
-                        <h4>$450</h4>
+                        <h4>50rs</h4>
                       </div>
                       <a href="#"><button type="submit" class="product__btn">Add To Cart</button></a>
                     </div>
@@ -497,10 +497,10 @@
                 <li class="glide__slide">
                   <div class="product">
                     <div class="product__header">
-                      <img src="images/products/headphone/headphone2.jpeg" alt="product">
+                      <img src="/images/products/updates/soap2.jpg" alt="product">
                     </div>
                     <div class="product__footer">
-                      <h3>Sony WH-CH510</h3>
+                      <h3>Pure Mint</h3>
                       <div class="rating">
                         <svg>
                           <use xlink:href="./images/sprite.svg#icon-star-full"></use>
@@ -519,7 +519,7 @@
                         </svg>
                       </div>
                       <div class="product__price">
-                        <h4>$300</h4>
+                        <h4>30rs</h4>
                       </div>
                       <a href="#"><button type="submit" class="product__btn">Add To Cart</button></a>
                     </div>
@@ -551,10 +551,10 @@
                 <li class="glide__slide">
                   <div class="product">
                     <div class="product__header">
-                      <img src="images/products/sumsung/samsung1.jpeg" alt="product">
+                      <img src="/images/products/updates/soap3.jpg" alt="product">
                     </div>
                     <div class="product__footer">
-                      <h3>Samsung Galaxy</h3>
+                      <h3>Natural Rose</h3>
                       <div class="rating">
                         <svg>
                           <use xlink:href="./images/sprite.svg#icon-star-full"></use>
@@ -573,7 +573,7 @@
                         </svg>
                       </div>
                       <div class="product__price">
-                        <h4>$300</h4>
+                        <h4>60rs</h4>
                       </div>
                       <a href="#"><button type="submit" class="product__btn">Add To Cart</button></a>
                     </div>
@@ -605,10 +605,10 @@
                 <li class="glide__slide">
                   <div class="product">
                     <div class="product__header">
-                      <img src="images/products/headphone/headphone1.jpeg" alt="product">
+                      <img src="/images/products/updates/soap4.jpg" alt="product">
                     </div>
                     <div class="product__footer">
-                      <h3>Sony WH-CH510</h3>
+                      <h3>Coconut Milk</h3>
                       <div class="rating">
                         <svg>
                           <use xlink:href="./images/sprite.svg#icon-star-full"></use>
@@ -627,7 +627,7 @@
                         </svg>
                       </div>
                       <div class="product__price">
-                        <h4>$250</h4>
+                        <h4>50rs</h4>
                       </div>
                       <a href="#"><button type="submit" class="product__btn">Add To Cart</button></a>
                     </div>
@@ -659,10 +659,10 @@
                 <li class="glide__slide">
                   <div class="product">
                     <div class="product__header">
-                      <img src="images/products/iPhone/iphone1.jpeg" alt="product">
+                      <img src="/images/products/updates/soap1.jpg" alt="product">
                     </div>
                     <div class="product__footer">
-                      <h3>Apple iPhone XR</h3>
+                      <h3>Coconut Milk</h3>
                       <div class="rating">
                         <svg>
                           <use xlink:href="./images/sprite.svg#icon-star-full"></use>
@@ -681,7 +681,7 @@
                         </svg>
                       </div>
                       <div class="product__price">
-                        <h4>$550</h4>
+                        <h4>50rs</h4>
                       </div>
                       <a href="#"><button type="submit" class="product__btn">Add To Cart</button></a>
                     </div>
@@ -755,7 +755,7 @@
             <div class="section__titles">
               <div class="section__title filter-btn" data-id="Featured Products">
                 <span class="dot"></span>
-                <h1 class="primary__title">Featured Products</h1>
+                <h1 class="primary__title">Latest Products</h1>
               </div>
             </div>
 
@@ -777,7 +777,7 @@
                 <use xlink:href="./images/sprite.svg#icon-airplane"></use>
               </svg>
             </div>
-            <p>FREE SHIPPING WORLD WIDE</p>
+            <p>ALL KERALA FREE SHIPPING</p>
           </div>
 
           <div class="facility__box">
@@ -786,7 +786,7 @@
                 <use xlink:href="./images/sprite.svg#icon-credit-card-alt"></use>
               </svg>
             </div>
-            <p>100% MONEY BACK GUARANTEE</p>
+            <p>100% MONEY BACK GUARANTEE IF NOT USED</p>
           </div>
 
           <div class="facility__box">
@@ -822,13 +822,10 @@
                   <div class="client__image">
                     <img src="./images/profile1.jpg" alt="profile">
                   </div>
-                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae fuga hic nesciunt tempore
-                    quibusdam consequatur eligendi unde officia ex quae.ipsum dolor sit amet consectetur adipisicing
-                    elit. Recusandae fuga hic nesciunt tempore
-                    quibusdam consequatur eligendi unde officia ex quae.</p>
+                  <p>Ambitious BCA final year student with a passion for development.<br> Eager to learn and grow, and contribute to the tech industry.</p>
                   <div class="client__info">
-                    <h3>John Smith</h3>
-                    <span>Founder at Apple</span>
+                    <h3>Sreeraj S Chandran</h3>
+                    <span>ft. JUNE</span>
                   </div>
                 </div>
               </li>
@@ -837,54 +834,10 @@
                   <div class="client__image">
                     <img src="./images/profile2.jpg" alt="profile">
                   </div>
-                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae fuga hic nesciunt tempore
-                    quibusdam consequatur
-                    eligendi unde officia ex quae.ipsum dolor sit amet consectetur adipisicing elit. Recusandae fuga hic
-                    nesciunt tempore
-                    quibusdam consequatur eligendi unde officia ex quae.adipisicing elit. Recusandae fuga hic
-                    nesciunt tempore
-                    quibusdam consequatur eligendi unde officia ex quae.</p>
+                  <p>Ambitious BCA final year student with a passion for development.<br> Eager to learn and grow, and contribute to the tech industry.</p>
                   <div class="client__info">
-                    <h3>John Smith</h3>
-                    <span>Founder at Apple</span>
-                  </div>
-                </div>
-              </li>
-              <li class="glide__slide">
-                <div class="testimonial__box">
-                  <div class="client__image">
-                    <img src="./images/profile3.jpg" alt="profile">
-                  </div>
-                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae fuga hic nesciunt tempore
-                    quibusdam consequatur
-                    eligendi unde officia ex quae.ipsum dolor sit amet consectetur adipisicing elit. Recusandae fuga hic
-                    nesciunt tempore
-                    quibusdam consequatur eligendi unde officia ex quae.adipisicing elit. Recusandae fuga hic
-                    nesciunt tempore
-                    quibusdam consequatur eligendi unde officia ex quae.</p>
-                  <div class="client__info">
-                    <h3>John Smith</h3>
-                    <span>Founder at Apple</span>
-                  </div>
-                </div>
-
-              </li>
-              <li class="glide__slide">
-                <div class="testimonial__box">
-                  <div class="client__image">
-                    <img src="./images/profile4.jpg" alt="">
-                  </div>
-                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae fuga hic nesciunt tempore
-                    quibusdam consequatur
-                    eligendi unde officia ex quae.adipisicing elit. Recusandae fuga hic
-                    nesciunt tempore
-                    quibusdam consequatur eligendi unde officia ex quae.
-                    hic
-                    nesciunt tempore
-                    quibusdam consequatur eligendi unde officia ex quae.</p>
-                  <div class="client__info">
-                    <h3>John Smith</h3>
-                    <span>Founder at Apple</span>
+                    <h3>Santhra Soni</h3>
+                    <span>ft. JUNE</span>
                   </div>
                 </div>
               </li>
@@ -894,8 +847,6 @@
           <div class="glide__bullets" data-glide-el="controls[nav]">
             <button class="glide__bullet" data-glide-dir="=0"></button>
             <button class="glide__bullet" data-glide-dir="=1"></button>
-            <button class="glide__bullet" data-glide-dir="=2"></button>
-            <button class="glide__bullet" data-glide-dir="=3"></button>
           </div>
         </div>
       </div>
@@ -908,7 +859,7 @@
           <div class="section__titles">
             <div class="section__title active">
               <span class="dot"></span>
-              <h1 class="primary__title">Phone News</h1>
+              <h1 class="primary__title">updates ...</h1>
             </div>
           </div>
         </div>
@@ -999,8 +950,8 @@
       <div class="container">
         <div class="newsletter__content">
           <div class="newsletter__data">
-            <h3>SUBSCRIBE TO OUR NEWSLETTER</h3>
-            <p>A short sentence describing what someone will receive by subscribing</p>
+            <h3>SUBSCRIBE TO OUR SOAP STORE</h3>
+            <p>Receive a fresh delivery of handcrafted soap to your door every month,<br> with new scents and styles to discover.</p>
           </div>
           <form action="#">
             <input type="email" placeholder="Enter your email address" class="newsletter__email">
@@ -1050,7 +1001,7 @@
                 <use xlink:href="./images/sprite.svg#icon-location"></use>
               </svg>
             </span>
-            42 Dream House, Dreammy street, 7131 Dreamville, USA
+            Chinamaya College Of Arts, Commerce & Science <br>Near Statue Junction, Layam Road, Tripunithura, Kerala-682301, India
           </div>
           <div>
             <span>
@@ -1058,7 +1009,7 @@
                 <use xlink:href="./images/sprite.svg#icon-envelop"></use>
               </svg>
             </span>
-            company@gmail.com
+            sreerajsc5@gmail.com
           </div>
           <div>
             <span>
@@ -1066,7 +1017,7 @@
                 <use xlink:href="./images/sprite.svg#icon-phone"></use>
               </svg>
             </span>
-            456-456-4512
+            8848066068
           </div>
           <div>
             <span>
@@ -1074,7 +1025,7 @@
                 <use xlink:href="./images/sprite.svg#icon-paperplane"></use>
               </svg>
             </span>
-            Dream City, USA
+            Kerala
           </div>
         </div>
       </div>
@@ -1107,7 +1058,7 @@
       <div class="popup__right">
         <div class="right__content">
           <h1>Get Discount <span>30%</span> Off</h1>
-          <p>Sign up to our newsletter and save 30% for you next purchase. No spam, we promise!
+          <p>Sign up to our updates and save 30% for you next purchase. No spam, we promise!
           </p>
           <form action="#">
             <input type="email" placeholder="Enter your email..." class="popup__form">
