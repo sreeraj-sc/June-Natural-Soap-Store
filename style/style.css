@@ -1,8 +1,8 @@
 body
 {
-    background: linear-gradient(to bottom,#3385ff, #2d2aeb);
+    background: #fff;
     font-family: monospace;
-    color: #ffffff;
+    color: black;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -33,7 +33,7 @@ p
 .log
 {
     border-radius: 5%;
-    background-color: #3385ff;
+    background-color: #e7e7e7;
 }
 .submit
 {
@@ -60,6 +60,6 @@ h4
 }
 .reg
 {
-    background-color: #3385ff;
+    background-color: #b9b9b9;
     border-radius: 5%;
 }
