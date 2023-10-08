@@ -870,70 +870,65 @@
                 <li class="glide__slide">
                   <div class="new__card">
                     <div class="card__header">
-                      <img src="./images/news1.jpg" alt="">
+                      <img src="./images/products/updates/soap1.jpg" alt="">
                     </div>
                     <div class="card__footer">
-                      <h3>Styling White Shirts After A Cool Day</h3>
-                      <span>By Admin</span>
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo praesentium, numquam non
-                        provident rem sed minus natus unde vel modi!</p>
-                      <a href="#"><button>Read More</button></a>
+                      <h3>The benefits of subscribing to a Soap Subscription box</h3>
+                      <p>Are you tired of constantly running out of soap? With a soap subscription box,
+                         you can ensure that you never have to worry about that again. Experience the luxury of receiving regular 
+                         delivery of artisanal soaps, allowing you to elevate …</p>
                     </div>
                   </div>
                 </li>
                 <li class="glide__slide">
                   <div class="new__card">
                     <div class="card__header">
-                      <img src="./images/news2.jpg" alt="">
+                      <img src="./images/products/updates/soap2.jpg" alt="">
                     </div>
                     <div class="card__footer">
-                      <h3>Styling White Shirts After A Cool Day</h3>
-                      <span>By Admin</span>
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo praesentium, numquam non
-                        provident rem sed minus natus unde vel modi!</p>
-                      <a href="#"><button>Read More</button></a>
+                      <h3>3 benifits of Natural soap! Are they worth the extra mula?</h3>
+                      <p>What are the benefits of natural soaps? Are they worth the extra money that you have to shell out?
+                         In this blog post I am going to go through 5 reasons that I
+                         think natural soap is worth the price</p>
                     </div>
                   </div>
                 </li>
                 <li class="glide__slide">
                   <div class="new__card">
                     <div class="card__header">
-                      <img src="./images/news3.jpg" alt="">
+                      <img src="./images/products/updates/soap3.jpg" alt="">
                     </div>
                     <div class="card__footer">
-                      <h3>Styling White Shirts After A Cool Day</h3>
-                      <span>By Admin</span>
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo praesentium, numquam non
-                        provident rem sed minus natus unde vel modi!</p>
-                      <a href="#"><button>Read More</button></a>
+                      <h3>Handmade Natural Soaps for sale for over 20 years!</h3>
+                      <p>Why buy my Handmade Natural Soap? You may be wondering wny you would want to buy my soap.
+                         Here’s a few of the reasons why. Handmade natural soap means natural ingredients. These are handmade natural soaps,
+                         which means they all …</p>
                     </div>
                   </div>
                 </li>
                 <li class="glide__slide">
                   <div class="new__card">
                     <div class="card__header">
-                      <img src="./images/news4.jpg" alt="">
+                      <img src="./images/products/updates/soap4.jpg" alt="">
                     </div>
                     <div class="card__footer">
-                      <h3>Styling White Shirts After A Cool Day</h3>
-                      <span>By Admin</span>
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo praesentium, numquam non
-                        provident rem sed minus natus unde vel modi!</p>
-                      <a href="#"><button>Read More</button></a>
+                      <h3>Self care is Essential & can be life changing. My story!</h3>
+                      <p>I have been talking about self care, along with healthy habits quite a bit recently in my blog posts.
+                         It has primarily been in general terms, but today I wanted to share more from a personal level. 
+                        Somewhere around 7 …</p>
                     </div>
                   </div>
                 </li>
                 <li class="glide__slide">
                   <div class="new__card">
                     <div class="card__header">
-                      <img src="./images/news5.jpg" alt="">
+                      <img src="./images/products/updates/soap1.jpg" alt="">
                     </div>
                     <div class="card__footer">
-                      <h3>Styling White Shirts After A Cool Day</h3>
-                      <span>By Admin</span>
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo praesentium, numquam non
-                        provident rem sed minus natus unde vel modi!</p>
-                      <a href="#"><button>Read More</button></a>
+                      <h3>Travel Essentials for your skin on the go by June Soaps</h3>
+                      <p>Jetsetter Skin Care: Your Passport to Healthy Skin Hey, globetrotters! I know you love to explore,
+                         so do I. I absolutely love to travel!! But I don’t
+                         want my skin to suffer in the rush of catching flights and ticking …</p>
                     </div>
                   </div>
                 </li>
