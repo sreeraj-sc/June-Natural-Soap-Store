@@ -68,7 +68,7 @@
           </div>
 
           <div class="nav__icons">
-            <a href="login.php" class="icon__item" id="login-btn">
+            <a href="#" class="icon__item" id="login-btn" onclick="openLoginPopup()">
               <svg class="icon__user">
                 <use xlink:href="./images/sprite.svg#icon-user"></use>
               </svg>
