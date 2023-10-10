@@ -10,7 +10,7 @@
 
   <link rel="shortcut icon" href="./images/June-logo-3.png" type="image/x-icon" />
 
-  <!-- bootstarp -->
+
   <!-- Carousel -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.core.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.theme.min.css
@@ -1037,7 +1037,7 @@
   </footer>
   <!-- End Footer -->
 
-  <!-- PopUp 1 -->
+   <!-- PopUp 1 -->
   <div class="popup hide__popup">
     <div class="popup__content">
       <div class="popup__close">
@@ -1085,46 +1085,6 @@
         </div>
     </div>
 </div>
-
-<!-- Popup 3 (New Popup) -->
-<div class="popup3 hide__popup" id="registerPopup">
-    <div class="popup__content centered">
-        <div class="popup__close">
-            <svg>
-                <use xlink:href="./images/sprite.svg#icon-cross"></use>
-            </svg>
-        </div>
-        <div class="centered-content">
-            <div class="register-form glide">
-               <h1>June Register</h1><br>
-              <hr><br>
-              <form action="" method="post">
-                <label for="name">Name</label><br>
-                <input type="text" id="fname" name="fname" placeholder=" first name" class="custom-input">
-                <input type="text" id="lname" name="lname" placeholder=" last name" class="custom-input"><br><br>
-                <label for="Mobile_number">Mobile number</label><br>
-                <select name="contry-code" id="contry-code" name="contry-code" class="custom-input">
-                  <option value="+91">+91 (India)</option>
-                  <option value="+1">+1 (USA)</option>
-                </select>
-                <input type="number" id="mobile-number" placeholder=" number" name="mobile-number" class="custom-input"><br><br>
-                <label for="email">Email</label><br>
-                <input type="email" id="email" name="email" placeholder=" email" class="custom-input"><br><br>
-                <label for="date-of-birth">Date Of Birth</label><br>
-                <input type="date" id="dob" name="dob" class="custom-input"><br><br>
-                <label for="password">Password</label><br>
-                <input type="text" id="password" name="password" placeholder=" include atleast 6 characters" class="custom-input"><br>
-                <p>| password must be at least 6 characters</p>
-                <label for="con-password">Confirm password</label><br>               
-                <input type="text" id="con-password" name="con-password" placeholder=" confirm password" class="custom-input"><br><br><br>
-                <div class="d-flex justify-content-center align-items-center">
-                  <input type="submit" value="submit" class="submit" name="submit">
-                </div>
-              </form><br>
-            </div>
-        </div>
-    </div>
-</div>
   <!-- Go To -->
 
   <a href="#header" class="goto-top scroll-link">
@@ -1144,7 +1104,6 @@
   <script src="./script/index.js"></script>
   <script src="./script/slider.js"></script>
 
-  <!-- bootstarp -->
 </body>
 
 </html>
