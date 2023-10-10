@@ -1056,6 +1056,32 @@ Category Center
 Pop Up
 ======================
 */
+/* Centered Popup Styles */
+.popup2 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+  transition: 0.3s;
+  transform: scale(1)
+}
+
+.popup2 .popup__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.popup2 .centered-content {
+  max-width: 400px; /* Adjust the width as needed */
+}
+
+/* ... (other styles) ... */
 
 .popup {
   position: fixed;
@@ -2611,4 +2637,25 @@ Cart Area Media Query
     .searchF .search-form{
       top: 14%;
     }
+}
+.login-form {
+  width: 300px;
+  padding: 20px;
+}
+.login-form input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+} 
+.forgot
+{
+  background-color: #000;
+}
+a{
+  text-decoration: none;
+}
+.submit
+{
+  width: 100px;
 }

@@ -42,6 +42,48 @@ if (popup) {
     }, 500);
   });
 }
+//popup2
+const loginPopup = document.querySelector("#loginPopup");
+const closeloginPopup = loginPopup.querySelector(".popup__close");
+closeloginPopup.addEventListener("click", () => {
+  loginPopup.classList.add("hide__popup");
+});
+function openLoginPopup() {
+  loginPopup.classList.remove("hide__popup");
+  if (popup2) {
+    closePopup.addEventListener("click", () => {
+      popup.classList.add("hide__popup");
+    });
+  
+    window.addEventListener("load", () => {
+      setTimeout(() => {
+        popup.classList.remove("hide__popup");
+      }, 500);
+    });
+  }
+}
+
+//popup3
+const registerPopup = document.querySelector("#RegisterPopup");
+const closeRegisterPopup = registerPopup.querySelector(".popup__close");
+closeRegisterPopup.addEventListener("click", () => {
+  RegisterPopup.classList.add("hide__popup");
+});
+function openRegisterPopup() {
+  RegisterPopup.classList.remove("hide__popup");
+  if (popup3) {
+    closePopup.addEventListener("click", () => {
+      popup.classList.add("hide__popup");
+    });
+  
+    window.addEventListener("load", () => {
+      setTimeout(() => {
+        popup.classList.remove("hide__popup");
+      }, 500);
+    });
+  }
+}
+
 
 /*
 =============
