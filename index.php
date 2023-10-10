@@ -4,42 +4,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<<<<<<< HEAD
-
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&display=swap" rel="stylesheet" />
 
   <link rel="shortcut icon" href="./images/June-logo-3.png" type="image/x-icon" />
-=======
->>>>>>> main
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&display=swap" rel="stylesheet" />
-
-<<<<<<< HEAD
   <!-- Carousel -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.core.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.theme.min.css
-">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.theme.min.css">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
   <!-- Custom StyleSheet -->
   <link rel="stylesheet" href="style/home_page.css" />
-
-=======
-  <link rel="shortcut icon" href="./images/June-logo-3.png" type="image/x-icon" />
-
-  <!-- bootstarp -->
-  <!-- Carousel -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.core.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.theme.min.css
-">
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
-  <!-- Custom StyleSheet -->
-  <link rel="stylesheet" href="style/home_page.css" />
-
->>>>>>> main
   <title>June</title>
 </head>
 
@@ -1057,7 +1033,6 @@
   </footer>
   <!-- End Footer -->
   <!-- PopUp 1 -->
->>>>>>> main
   <div class="popup hide__popup">
     <div class="popup__content">
       <div class="popup__close">
@@ -1105,7 +1080,6 @@
         </div>
     </div>
 </div>
-<<<<<<< HEAD
 
   <!-- Go To -->
 
@@ -1125,11 +1099,6 @@
   <script src="./script/products.js"></script>
   <script src="./script/index.js"></script>
   <script src="./script/slider.js"></script>
-
-<<<<<<< HEAD
-=======
-  <!-- bootstarp -->
->>>>>>> main
 </body>
 
 </html>

@@ -19,7 +19,7 @@
 
 
     <!-- Custom StyleSheet -->
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="style/home_page.css" />
 
     <title>Phone Shop</title>
 </head>
@@ -37,13 +37,13 @@
 
                     <div class="nav__logo">
                         <a href="/" class="scroll-link">
-                            PHONE
+                            JUNE
                         </a>
                     </div>
 
                     <div class="nav__menu">
                         <div class="menu__top">
-                            <span class="nav__category">PHONE</span>
+                            <span class="nav__category">JUNE</span>
                             <a href="#" class="close__toggle">
                                 <svg>
                                     <use xlink:href="./images/sprite.svg#icon-cross"></use>
@@ -67,7 +67,7 @@
                     </div>
 
                     <div class="nav__icons">
-                        <a href="#" class="icon__item">
+                        <a href="#" class="icon__item" id="login-btn" onclick="openLoginPopup()">
                             <svg class="icon__user">
                                 <use xlink:href="./images/sprite.svg#icon-user"></use>
                             </svg>
@@ -128,17 +128,16 @@
                                     <tr>
                                         <td class="product__thumbnail">
                                             <a href="#">
-                                                <img src="./images/products/iPhone/iphone6.jpeg" alt="">
+                                                <img src="./images/products/soap/product1.jpg" alt="">
                                             </a>
                                         </td>
                                         <td class="product__name">
-                                            <a href="#">Apple iPhone 11</a>
+                                            <a href="#">Goat Milk with Honey</a>
                                             <br><br>
-                                            <small>White/6.25</small>
                                         </td>
                                         <td class="product__price">
                                             <div class="price">
-                                                <span class="new__price">$250.99</span>
+                                                <span class="new__price">100rs</span>
                                             </div>
                                         </td>
                                         <td class="product__quantity">
@@ -160,7 +159,7 @@
                                         </td>
                                         <td class="product__subtotal">
                                             <div class="price">
-                                                <span class="new__price">$250.99</span>
+                                                <span class="new__price">150rs</span>
                                             </div>
                                             <a href="#" class="remove__cart-item">
                                                 <svg>
@@ -172,17 +171,15 @@
                                     <tr>
                                         <td class="product__thumbnail">
                                             <a href="#">
-                                                <img src="./images/products/sumsung/samsung5.jpeg" alt="">
+                                                <img src="./images/products/soap/product2.jpg" alt="">
                                             </a>
                                         </td>
                                         <td class="product__name">
-                                            <a href="#">Apple iPhone 11</a>
-                                            <br><br>
-                                            <small>White/6.25</small>
+                                            <a href="#">Tie Dye</a>
                                         </td>
                                         <td class="product__price">
                                             <div class="price">
-                                                <span class="new__price">$250.99</span>
+                                                <span class="new__price">50rs</span>
                                             </div>
                                         </td>
                                         <td class="product__quantity">
@@ -204,7 +201,7 @@
                                         </td>
                                         <td class="product__subtotal">
                                             <div class="price">
-                                                <span class="new__price">$250.99</span>
+                                                <span class="new__price">100rs</span>
                                             </div>
                                             <a href="#" class="remove__cart-item">
                                                 <svg>
@@ -216,17 +213,16 @@
                                     <tr>
                                         <td class="product__thumbnail">
                                             <a href="#">
-                                                <img src="./images/products/sumsung/samsung2.jpeg" alt="">
+                                                <img src="./images/products/soap/product3.jpg" alt="">
                                             </a>
                                         </td>
                                         <td class="product__name">
-                                            <a href="#">Apple iPhone 11</a>
+                                            <a href="#">Organic Coffee & Neem</a>
                                             <br><br>
-                                            <small>White/6.25</small>
                                         </td>
                                         <td class="product__price">
                                             <div class="price">
-                                                <span class="new__price">$250.99</span>
+                                                <span class="new__price">50rs</span>
                                             </div>
                                         </td>
                                         <td class="product__quantity">
@@ -248,7 +244,7 @@
                                         </td>
                                         <td class="product__subtotal">
                                             <div class="price">
-                                                <span class="new__price">$250.99</span>
+                                                <span class="new__price">100rs</span>
                                             </div>
                                             <a href="#" class="remove__cart-item">
                                                 <svg>
@@ -260,17 +256,16 @@
                                     <tr>
                                         <td class="product__thumbnail">
                                             <a href="#">
-                                                <img src="./images/products/iPhone/iphone4.jpeg" alt="">
+                                                <img src="./images/products/soap/product4.jpg" alt="">
                                             </a>
                                         </td>
                                         <td class="product__name">
-                                            <a href="#">Apple iPhone 11</a>
+                                            <a href="#">Organic Lemon</a>
                                             <br><br>
-                                            <small>White/6.25</small>
                                         </td>
                                         <td class="product__price">
                                             <div class="price">
-                                                <span class="new__price">$250.99</span>
+                                                <span class="new__price">50rs</span>
                                             </div>
                                         </td>
                                         <td class="product__quantity">
@@ -292,7 +287,7 @@
                                         </td>
                                         <td class="product__subtotal">
                                             <div class="price">
-                                                <span class="new__price">$250.99</span>
+                                                <span class="new__price">100rs</span>
                                             </div>
                                             <a href="#" class="remove__cart-item">
                                                 <svg>
@@ -311,7 +306,7 @@
                             </div>
                             <div class="check__shipping">
                                 <input type="checkbox">
-                                <span>Shipping(+7$)</span>
+                                <span>Shipping(+50rs)</span>
                             </div>
                         </div>
 
@@ -320,15 +315,15 @@
                             <ul>
                                 <li>
                                     Subtotal
-                                    <span class="new__price">$250.99</span>
+                                    <span class="new__price">1000rs</span>
                                 </li>
                                 <li>
                                     Shipping
-                                    <span>$0</span>
+                                    <span>50rs</span>
                                 </li>
                                 <li>
                                     Total
-                                    <span class="new__price">$250.99</span>
+                                    <span class="new__price">1050rs</span>
                                 </li>
                             </ul>
                             <a href="">PROCEED TO CHECKOUT</a>
@@ -348,7 +343,7 @@
                                 <use xlink:href="./images/sprite.svg#icon-airplane"></use>
                             </svg>
                         </div>
-                        <p>FREE SHIPPING WORLD WIDE</p>
+                        <p>ALL KERALA FREE SHIPPINGE</p>
                     </div>
 
                     <div class="facility__box">
@@ -357,7 +352,7 @@
                                 <use xlink:href="./images/sprite.svg#icon-credit-card-alt"></use>
                             </svg>
                         </div>
-                        <p>100% MONEY BACK GUARANTEE</p>
+                        <p>100% MONEY BACK GUARANTEE IF NOT USED</p>
                     </div>
 
                     <div class="facility__box">
@@ -381,84 +376,104 @@
             </div>
         </section>
     </main>
-
-    <!-- Footer -->
-    <footer id="footer" class="section footer">
-        <div class="container">
-            <div class="footer__top">
-                <div class="footer-top__box">
-                    <h3>EXTRAS</h3>
-                    <a href="#">Brands</a>
-                    <a href="#">Gift Certificates</a>
-                    <a href="#">Affiliate</a>
-                    <a href="#">Specials</a>
-                    <a href="#">Site Map</a>
-                </div>
-                <div class="footer-top__box">
-                    <h3>INFORMATION</h3>
-                    <a href="#">About Us</a>
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms & Conditions</a>
-                    <a href="#">Contact Us</a>
-                    <a href="#">Site Map</a>
-                </div>
-                <div class="footer-top__box">
-                    <h3>MY ACCOUNT</h3>
-                    <a href="#">My Account</a>
-                    <a href="#">Order History</a>
-                    <a href="#">Wish List</a>
-                    <a href="#">Newsletter</a>
-                    <a href="#">Returns</a>
-                </div>
-                <div class="footer-top__box">
-                    <h3>CONTACT US</h3>
-                    <div>
-                        <span>
-                            <svg>
-                                <use xlink:href="./images/sprite.svg#icon-location"></use>
-                            </svg>
-                        </span>
-                        42 Dream House, Dreammy street, 7131 Dreamville, USA
-                    </div>
-                    <div>
-                        <span>
-                            <svg>
-                                <use xlink:href="./images/sprite.svg#icon-envelop"></use>
-                            </svg>
-                        </span>
-                        company@gmail.com
-                    </div>
-                    <div>
-                        <span>
-                            <svg>
-                                <use xlink:href="./images/sprite.svg#icon-phone"></use>
-                            </svg>
-                        </span>
-                        456-456-4512
-                    </div>
-                    <div>
-                        <span>
-                            <svg>
-                                <use xlink:href="./images/sprite.svg#icon-paperplane"></use>
-                            </svg>
-                        </span>
-                        Dream City, USA
-                    </div>
-                </div>
-            </div>
+<!-- Footer -->
+<footer id="footer" class="section footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer-top__box">
+          <h3>EXTRAS</h3>
+          <a href="#">Brands</a>
+          <a href="#">Gift Certificates</a>
+          <a href="#">Affiliate</a>
+          <a href="#">Specials</a>
+          <a href="#">Site Map</a>
         </div>
-        <div class="footer__bottom">
-            <div class="footer-bottom__box">
-
-            </div>
-            <div class="footer-bottom__box">
-
-            </div>
+        <div class="footer-top__box">
+          <h3>INFORMATION</h3>
+          <a href="#">About Us</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms & Conditions</a>
+          <a href="#">Contact Us</a>
+          <a href="#">Site Map</a>
         </div>
+        <div class="footer-top__box">
+          <h3>MY ACCOUNT</h3>
+          <a href="#">My Account</a>
+          <a href="#">Order History</a>
+          <a href="#">Wish List</a>
+          <a href="#">Newsletter</a>
+          <a href="#">Returns</a>
         </div>
-    </footer>
+        <div class="footer-top__box">
+          <h3>CONTACT US</h3>
+          <div>
+            <span>
+              <svg>
+                <use xlink:href="./images/sprite.svg#icon-location"></use>
+              </svg>
+            </span>
+            Chinamaya College Of Arts, Commerce & Science <br>Near Statue Junction, Layam Road, Tripunithura, Kerala-682301, India
+          </div>
+          <div>
+            <span>
+              <svg>
+                <use xlink:href="./images/sprite.svg#icon-envelop"></use>
+              </svg>
+            </span>
+            sreerajsc5@gmail.com
+          </div>
+          <div>
+            <span>
+              <svg>
+                <use xlink:href="./images/sprite.svg#icon-phone"></use>
+              </svg>
+            </span>
+            8848066068
+          </div>
+          <div>
+            <span>
+              <svg>
+                <use xlink:href="./images/sprite.svg#icon-paperplane"></use>
+              </svg>
+            </span>
+            Kerala
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="footer-bottom__box">
 
+      </div>
+      <div class="footer-bottom__box">
+
+      </div>
+    </div>
+    </div>
+  </footer>
     <!-- End Footer -->
+<!-- Popup 2 (New Popup) -->
+<div class="popup2 hide__popup" id="loginPopup">
+    <div class="popup__content centered">
+        <div class="popup__close">
+            <svg>
+                <use xlink:href="./images/sprite.svg#icon-cross"></use>
+            </svg>
+        </div>
+        <div class="centered-content">
+            <div class="login-form glide">
+               <h1>June Login</h1><br>
+              <hr><br>
+              <form action="login.php" method="post">
+                <input type="text" name="username" placeholder="Username" class="popup__form">
+                <input type="password" name="password" placeholder="Password" class="popup__form">
+                <button class="submit" type="submit" id="submit">submit</button>
+              </form>
+              <p>Don't have an account? <a href="#" onclick="openRegisterPopup()"><strong>Sign Up</strong></a></p>
+            </div>
+        </div>
+    </div>
+</div>
 
     <!-- Go To -->
 
@@ -475,9 +490,9 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <!-- Custom JavaScript -->
-    <script src="./js/products.js"></script>
-    <script src="./js/index.js"></script>
-    <script src="./js/slider.js"></script>
+    <script src="./script/products.js"></script>
+    <script src="./script/index.js"></script>
+    <script src="./script/slider.js"></script>
 </body>
 
 </html>

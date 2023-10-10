@@ -19,7 +19,7 @@
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
   <!-- Custom StyleSheet -->
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="style/home_page.css" />
 
   <title>Phone Shop</title>
 </head>
@@ -37,13 +37,13 @@
 
           <div class="nav__logo">
             <a href="/" class="scroll-link">
-              PHONE
+              JUNE
             </a>
           </div>
 
           <div class="nav__menu">
             <div class="menu__top">
-              <span class="nav__category">PHONE</span>
+              <span class="nav__category">JUNE</span>
               <a href="#" class="close__toggle">
                 <svg>
                   <use xlink:href="./images/sprite.svg#icon-cross"></use>
@@ -101,7 +101,7 @@
                 </svg>
               </a>
             </li>
-            <li class="page__title">iPhone 11</li>
+            <li class="page__title">Glycerin Honey</li>
           </ul>
         </div>
       </div>
@@ -117,25 +117,25 @@
             <div class="details__container--left">
               <div class="product__pictures">
                 <div class="pictures__container">
-                  <img class="picture" src="./images/products/iPhone/iphone1.jpeg" id="pic1" />
+                  <img class="picture" src="./images/products/soap/product3.jpg" id="pic1" />
                 </div>
                 <div class="pictures__container">
-                  <img class="picture" src="./images/products/iPhone/iphone2.jpeg" id="pic2" />
+                  <img class="picture" src="./images/products/soap/product1.jpg" id="pic2" />
                 </div>
                 <div class="pictures__container">
-                  <img class="picture" src="./images/products/iPhone/iphone3.jpeg" id="pic3" />
+                  <img class="picture" src="./images/products/soap/product2.jpg" id="pic3" />
                 </div>
                 <div class="pictures__container">
-                  <img class="picture" src="./images/products/iPhone/iphone4.jpeg" id="pic4" />
+                  <img class="picture" src="./images/products/soap/product4.jpg" id="pic4" />
                 </div>
                 <div class="pictures__container">
-                  <img class="picture" src="./images/products/iPhone/iphone5.jpeg" id="pic5" />
+                  <img class="picture" src="./images/products/soap/product5.jpg" id="pic5" />
                 </div>
               </div>
               <div class="product__picture" id="product__picture">
                 <!-- <div class="rect" id="rect"></div> -->
                 <div class="picture__container">
-                  <img src="./images/products/iPhone/iphone1.jpeg" id="pic" />
+                  <img src="./images/products/soap/product3.jpg" id="pic" />
                 </div>
               </div>
               <div class="zoom" id="zoom"></div>
@@ -162,9 +162,9 @@
 
           <div class="product-detail__right">
             <div class="product-detail__content">
-              <h3>Apple iPhone XR</h3>
+              <h3>Glycerin Honey</h3>
               <div class="price">
-                <span class="new__price">$250.99</span>
+                <span class="new__price">750rs</span>
               </div>
               <div class="product__review">
                 <div class="rating">
@@ -194,24 +194,7 @@
               </p>
               <div class="product__info-container">
                 <ul class="product__info">
-                  <li class="select">
-                    <div class="select__option">
-                      <label for="colors">Color</label>
-                      <select name="colors" id="colors" class="select-box">
-                        <option value="blue">blue</option>
-                        <option value="red">red</option>
-                      </select>
-                    </div>
-                    <div class="select__option">
-                      <label for="size">Inches</label>
-                      <select name="size" id="size" class="select-box">
-                        <option value="6.65">6.65</option>
-                        <option value="7.50">7.50</option>
-                      </select>
-                    </div>
-                  </li>
                   <li>
-
                     <div class="input-counter">
                       <span>Quantity:</span>
                       <div>
@@ -232,15 +215,7 @@
 
                   <li>
                     <span>Subtotal:</span>
-                    <a href="#" class="new__price">$250.99</a>
-                  </li>
-                  <li>
-                    <span>Brand:</span>
-                    <a href="#">Apple</a>
-                  </li>
-                  <li>
-                    <span>Product Type:</span>
-                    <a href="#">Phone</a>
+                    <a href="#" class="new__price">800rs</a>
                   </li>
                   <li>
                     <span>Availability:</span>
@@ -456,7 +431,7 @@
                       <a href="#"><img src="/images/products/iPhone/iphone6.jpeg" alt="product"></a>
                     </div>
                     <div class="product__footer">
-                      <h3>Apple iPhone 11</h3>
+                      <h3>lemon</h3>
                       <div class="rating">
                         <svg>
                           <use xlink:href="./images/sprite.svg#icon-star-full"></use>
@@ -1428,7 +1403,7 @@
                 <use xlink:href="./images/sprite.svg#icon-airplane"></use>
               </svg>
             </div>
-            <p>FREE SHIPPING WORLD WIDE</p>
+            <p>ALL KERALA FREE SHIPPINGE</p>
           </div>
 
           <div class="facility__box">
@@ -1437,7 +1412,7 @@
                 <use xlink:href="./images/sprite.svg#icon-credit-card-alt"></use>
               </svg>
             </div>
-            <p>100% MONEY BACK GUARANTEE</p>
+            <p>100% MONEY BACK GUARANTEE IF NOT USED</p>
           </div>
 
           <div class="facility__box">
@@ -1498,7 +1473,7 @@
                 <use xlink:href="./images/sprite.svg#icon-location"></use>
               </svg>
             </span>
-            42 Dream House, Dreammy street, 7131 Dreamville, USA
+            Chinamaya College Of Arts, Commerce & Science <br>Near Statue Junction, Layam Road, Tripunithura, Kerala-682301, India
           </div>
           <div>
             <span>
@@ -1506,7 +1481,7 @@
                 <use xlink:href="./images/sprite.svg#icon-envelop"></use>
               </svg>
             </span>
-            company@gmail.com
+            sreerajsc5@gmail.com
           </div>
           <div>
             <span>
@@ -1514,7 +1489,7 @@
                 <use xlink:href="./images/sprite.svg#icon-phone"></use>
               </svg>
             </span>
-            456-456-4512
+            8848066068
           </div>
           <div>
             <span>
@@ -1522,7 +1497,7 @@
                 <use xlink:href="./images/sprite.svg#icon-paperplane"></use>
               </svg>
             </span>
-            Dream City, USA
+            Kerala
           </div>
         </div>
       </div>
@@ -1537,7 +1512,6 @@
     </div>
     </div>
   </footer>
-
   <!-- End Footer -->
 
   <!-- Go To -->
