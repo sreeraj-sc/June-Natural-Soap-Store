@@ -21,7 +21,7 @@
     <!-- Custom StyleSheet -->
     <link rel="stylesheet" href="style/home_page.css" />
 
-    <title>Phone Shop</title>
+    <title>JUNE</title>
 </head>
 
 <body>
@@ -52,16 +52,16 @@
                         </div>
                         <ul class="nav__list">
                             <li class="nav__item">
-                                <a href="/" class="nav__link">Home</a>
+                                <a href="index.php" class="nav__link">Home</a>
                             </li>
                             <li class="nav__item">
-                                <a href="#" class="nav__link">Products</a>
+                                <a href="index.php" class="nav__link">Products</a>
                             </li>
                             <li class="nav__item">
-                                <a href="#" class="nav__link">Blog</a>
+                                <a href="index.php" class="nav__link">Blog</a>
                             </li>
                             <li class="nav__item">
-                                <a href="#" class="nav__link">Contact</a>
+                                <a href="index.php" class="nav__link">Contact</a>
                             </li>
                         </ul>
                     </div>

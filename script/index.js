@@ -71,7 +71,7 @@ closeRegisterPopup.addEventListener("click", () => {
 });
 function openRegisterPopup() {
   RegisterPopup.classList.remove("hide__popup");
-  if (popup3) {
+  if (popup4) {
     closePopup.addEventListener("click", () => {
       popup.classList.add("hide__popup");
     });

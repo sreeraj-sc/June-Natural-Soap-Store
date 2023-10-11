@@ -76,7 +76,7 @@
               </svg>
             </a>
 
-            <a href="#" class="icon__item" id="cart-btn">
+            <a href="cart.php" class="icon__item" id="cart-btn">
               <svg class="icon__cart">
                 <use xlink:href="./images/sprite.svg#icon-shopping-basket"></use>
               </svg>
@@ -140,39 +140,6 @@
         </div>
       </div>
     </div>
-    <!-- cart button -->
-    <div class="shopping-cart">
-        <div class="box">
-            <i class="fas fa-trash"></i>
-            <img src="images/products/iPhone/iphone1.jpeg">
-            <div class="content">
-                <h3>iPhone</h3>
-                <span class="price">$800.99/-</span>
-                <span class="quantity">qty : 1</span>
-            </div>
-        </div>
-        <div class="box">
-            <i class="fas fa-trash"></i>
-            <img src="images/products/sumsung/samsung3.jpeg">
-            <div class="content">
-                <h3>Samsung A22</h3>
-                <span class="price">$350.99/-</span>
-                <span class="quantity">qty : 1</span>
-            </div>
-        </div>
-        <div class="box">
-            <i class="fas fa-trash"></i>
-            <img src="images/products/headphone/headphone3.jpeg">
-            <div class="content">
-                <h3>Boat</h3>
-                <span class="price">$54.99/-</span>
-                <span class="quantity">qty : 1</span>
-            </div>
-        </div>
-        <div class="total">Total : $1354.69/-</div>
-        <a href="#" class="btn">Check out</a>
-    </div>
-    <!-- cart end -->
   </header>
   <!-- End Header -->
 
@@ -1080,6 +1047,42 @@
         </div>
     </div>
 </div>
+<!-- Popup 3 (New Popup) -->
+<!-- <div class="popup4 hide__popup" id="RegisterPopup">
+    <div class="popup__content centered">
+        <div class="popup__close">
+            <svg>
+                <use xlink:href="./images/sprite.svg#icon-cross"></use>
+            </svg>
+        </div>
+        <div class="centered-content">
+            <div class="register-form glide">
+               <h1>Sign Up</h1><br>
+              <hr><br>
+              <form action="registration.php" method="post">
+                <label for="">First Name</label>
+                <input type="text" name="fname" placeholder="Enter here" class="popup__form">
+                <label for="">Last Name</label>
+                <input type="text" name="lname" placeholder="Enter here" class="popup__form"><br>
+                <label for="">Email</label>
+                <input type="email" name="email" placeholder="Enter here" class="popup__form">
+                <label for="Mobile_number">Mobile number</label><br>
+                <select name="contry-code" id="contry-code" name="contry-code" class="custom-input">
+                  <option value="+91">+91 (India)</option>
+                  <option value="+1">+1 (USA)</option>
+                </select><br>
+                <label for="">Date Of Birth</label>
+                <input type="date" name="dob" placeholder="" class="custom-input"><br>
+                <label for="">Password</label>
+                <input type="password" name="password" placeholder="Password" class="popup__form">
+                <label for="">confirm password</label>
+                <input type="password" name="con_password" placeholder="Password" class="custom-input"><br><br>
+                <button class="submit" type="submit" id="submit">submit</button>
+              </form>
+            </div>
+        </div>
+    </div>
+</div> -->
 
   <!-- Go To -->
 

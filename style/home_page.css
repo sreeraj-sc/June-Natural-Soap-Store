@@ -2659,3 +2659,13 @@ a{
 {
   width: 100px;
 }
+.register-form {
+  width: 300px;
+  padding: 20px;
+}
+.register-form input {
+  width: 50%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+} 
