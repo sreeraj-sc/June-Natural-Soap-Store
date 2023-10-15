@@ -2669,3 +2669,8 @@ a{
   border: 1px solid #ccc;
   margin-bottom: 10px;
 } 
+.form-group
+{
+  height: 10vh;
+  width: 40vh;
+}

@@ -1042,7 +1042,7 @@
                 <input type="password" name="password" placeholder="Password" class="popup__form">
                 <button class="submit" type="submit" id="submit">submit</button>
               </form>
-              <p>Don't have an account? <a href="#" onclick="openRegisterPopup()"><strong>Sign Up</strong></a></p>
+              <p>Don't have an account? <a href="registration.php"><strong>Sign Up</strong></a></p>
             </div>
         </div>
     </div>

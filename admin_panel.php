@@ -1,70 +1,71 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&display=swap" rel="stylesheet" />
-    <link rel="shortcut icon" href="./images/June-logo-3.png" type="image/x-icon" />
-
-
-    <!-- Carousel -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.core.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.theme.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
-    <!-- Custom StyleSheet -->
-    <link rel="stylesheet" href="style/style.css" type="text/css">
-
-    <title>June</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    
-</head>
-<body>
-    <form action="" method="post" enctype="multipart/form-data">
-        <input type="file" name="image">
-        <input type="submit" name="submit" value="submit">
-    </form>
-
-    <?php
-
-$db = new PDO('mysql:host=localhost;dbname=June_Natural_Soap_Store', 'root', 'root');
-
-if(isset($_POST['submit']))
+<?php
+    session_start();
+    $uid = $_SESSION['uid'];
+    include './common/CommonHeader.php';
+    include './common/db_connection.php';   
+?>
+<style>
+    .form-group
 {
-    try 
-    {
-
-        // Get the image data
-        $imageData = file_get_contents($_FILES['image']['tmp_name']);
-        $filename = $_FILES['image']['name'];
-        $type = $_FILES['image']['type'];
-
-        // Create a prepared statement to insert the image data into the database
-        $sql = 'INSERT INTO home_page_images (filename, type, data) VALUES (?, ?, ?)';
-        $stmt = $db->prepare($sql);
-
-        // Bind the image data, filename, and type to the prepared statement
-        $stmt->bindParam(1, $imageData, PDO::PARAM_LOB);
-        $stmt->bindParam(2, $filename, PDO::PARAM_STR);
-        $stmt->bindParam(3, $type, PDO::PARAM_STR);
-
-        // Execute the prepared statement
-        $stmt->execute();
-
-        // Success message
-        echo 'Image uploaded successfully!';
-
-    }
-    catch (Exception $e) 
-    {
-
-        // Handle the exception
-        echo $e->getMessage();
-    }
+  height: 10vh;
+  width: 150vh;
 }
+</style>
+<div class="container mt-5 ">
+    <center>
+        <h1>Add Soap</h1><br>
+        <hr>
+        <br>
+        <form action="" method="post">
+            <div class="form-group">
+                <label for="soapname">Soap Name</label>
+                <input type="text" class="form-control" id="soapname" name="soapname" placeholder="Enter soap name">
+            </div>
+            <div class="form-group">
+                <label for="image">Image</label>
+                <input type="file" class="form-control" placeholder="Insert Image" name="simage" required>
+            </div>
+            <div class="form-group">
+                <label for="carPrice">Soap Price</label>
+                <input type="number" class="form-control" id="soapprice" name="soapprice" placeholder="Enter soap price">
+            </div>
+            <div class="form-group">
+                <Button type="submit" name="add" class="btn-primary">Submit</Button>
+            </div>
+        </form>
+    </center>
+</div>
+<?php
+    include './common/CommonFooter.php';
+    if (isset($_REQUEST['add'])) {
 
-    ?>
+        $Cname = $_REQUEST['soapname'];
+        $sprice = $_REQUEST['soapprice'];
 
-</body>
-</html>
+        $filename = $_FILES["simage"]["name"];
+        $tempname = $_FILES["simage"]["tmp_name"];
+        $folder = "image/" . $filename;
+
+        if (move_uploaded_file($tempname, './images/' . $filename)) {
+            $qryCheck = "SELECT COUNT(*) AS cnt FROM `soaps` WHERE `soapname` = '$pname' OR `sprice` = '$price'";
+            $qryOut = mysqli_query($conn, $qryCheck);
+            $fetchData = mysqli_fetch_array($qryOut);
+
+            if ($fetchData['cnt'] > 0) {
+                echo "<script>alert('Already exist ');
+                window.location = 'AddCars.php';
+                </script>";
+            } 
+            else {
+                $qryReg = "INSERT INTO car(`cphoto`,`cname`,`cmodel`,`cfuel`,`cprice`,`cdesc`)VALUES('$filename','$Cname','$Cmodel','$Cfuel','$Cprice','$Cdescription')";
+                echo $qryReg . "&& ";
+                if ($conn->query($qryReg) == TRUE) {
+                    echo "<script>alert(' Success');window.location = 'ViewCars.php';</script>";
+                } 
+                else {
+                    echo "<script>alert(' Failed');window.location = 'AddCars.php';</script>";
+                }
+            }
+        }
+    }
+?>
