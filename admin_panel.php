@@ -55,12 +55,12 @@
         if ($stmt->execute()) {
             echo '<script type="text/javascript">
             alert("Image uploaded successfully");
-            window.location.href = "redirect_page.php";
+            window.location.href = "admin_panel.php";
           </script>';
         } else {
             echo '<script type="text/javascript">
             alert("image upload fail");
-            window.location.href = "redirect_page.php";
+            window.location.href = "admin_panel.php";
           </script>' . $stmt->error;
         }
     

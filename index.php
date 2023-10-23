@@ -1,3 +1,12 @@
+<?php
+  include './common/db_connection.php';
+  $sql = "SELECT photo, name, price FROM products";
+  $result = $conn->query($sql);
+
+  if ($result === false) {
+    die("Error in SQL query: " . $conn->error);
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -97,7 +106,7 @@
                 <div class="hero__left">
                   <h1 class="">June Natural Soap</h1>
                   <p>Happiness Is Handmade</p>
-                  <a href="#"><button class="hero__btn">SHOP NOW</button></a>
+                  <a href="#latest"><button class="hero__btn">SHOP NOW</button></a>
                 </div>
                 <div class="hero__right">
                   <div class="hero__img-container">
@@ -111,7 +120,7 @@
                 <div class="hero__left">
                   <h1 class="">June Natural Soap</h1>
                   <p>Happiness Is Handmade</p>
-                  <a href="#"><button class="hero__btn">SHOP NOW</button></a>
+                  <a href="#latest"><button class="hero__btn">SHOP NOW</button></a>
                 </div>
                 <div class="hero__right">
                   <img class="banner_02" src="./images/banner_02.png" alt="banner2" />
@@ -187,495 +196,72 @@
           <div class="glide" id="glide_2">
             <div class="glide__track" data-glide-el="track">
               <ul class="glide__slides latest-center">
-                <li class="glide__slide">
-                  <div class="product">
-                    <div class="product__header">
-                      <img src="./images/products/soap/product3.jpg" alt="product">
-                    </div>
-                    <div class="product__footer">
-                      <h3>Glycerin Honey</h3>
-                      <div class="rating">
-                        <svg>
-                          <use xlink:href="./images/sprite.svg#icon-star-full"></use>
-                        </svg>
-                        <svg>
-                          <use xlink:href="./images/sprite.svg#icon-star-full"></use>
-                        </svg>
-                        <svg>
-                          <use xlink:href="./images/sprite.svg#icon-star-full"></use>
-                        </svg>
-                        <svg>
-                          <use xlink:href="./images/sprite.svg#icon-star-full"></use>
-                        </svg>
-                        <svg>
-                          <use xlink:href="./images/sprite.svg#icon-star-empty"></use>
-                        </svg>
-                      </div>
-                      <div class="product__price">
-                        <h4>750rs</h4>
-                      </div>
-                      <a href="#"><button type="submit" class="product__btn">Add To Cart</button></a>
-                    </div>
-                    <ul>
-                      <li>
-                        <a data-tip="Quick View" data-place="left" href="#">
-                          <svg>
-                            <use xlink:href="./images/sprite.svg#icon-eye"></use>
-                          </svg>
-                        </a>
-                      </li>
-                      <li>
-                        <a data-tip="Add To Wishlist" data-place="left" href="#">
-                          <svg>
-                            <use xlink:href="./images/sprite.svg#icon-heart-o"></use>
-                          </svg>
-                        </a>
-                      </li>
-                      <li>
-                        <a data-tip="Add To Compare" data-place="left" href="#">
-                          <svg>
-                            <use xlink:href="./images/sprite.svg#icon-loop2"></use>
-                          </svg>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </li>
-                <li class="glide__slide">
-                  <div class="product">
-                    <div class="product__header">
-                      <img src="./images/products/soap/product5.jpg" alt="product">
-                    </div>
-                    <div class="product__footer">
-                      <h3>Goat Milk with Honey</h3>
-                      <div class="rating">
-                        <svg>
-                          <use xlink:href="./images/sprite.svg#icon-star-full"></use>
-                        </svg>
-                        <svg>
-                          <use xlink:href="./images/sprite.svg#icon-star-full"></use>
-                        </svg>
-                        <svg>
-                          <use xlink:href="./images/sprite.svg#icon-star-full"></use>
-                        </svg>
-                        <svg>
-                          <use xlink:href="./images/sprite.svg#icon-star-full"></use>
-                        </svg>
-                        <svg>
-                          <use xlink:href="./images/sprite.svg#icon-star-empty"></use>
-                        </svg>
-                      </div>
-                      <div class="product__price">
-                        <h4>100rs</h4>
-                      </div>
-                      <a href="#"><button type="submit" class="product__btn">Add To Cart</button></a>
-                    </div>
-                    <ul>
-                      <li>
-                        <a data-tip="Quick View" data-place="left" href="#">
-                          <svg>
-                            <use xlink:href="./images/sprite.svg#icon-eye"></use>
-                          </svg>
-                        </a>
-                      </li>
-                      <li>
-                        <a data-tip="Add To Wishlist" data-place="left" href="#">
-                          <svg>
-                            <use xlink:href="./images/sprite.svg#icon-heart-o"></use>
-                          </svg>
-                        </a>
-                      </li>
-                      <li>
-                        <a data-tip="Add To Compare" data-place="left" href="#">
-                          <svg>
-                            <use xlink:href="./images/sprite.svg#icon-loop2"></use>
-                          </svg>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </li>
-                <li class="glide__slide">
-                  <div class="product">
-                    <div class="product__header">
-                      <img src="./images/products/soap/product6.jpg" alt="product">
-                    </div>
-                    <div class="product__footer">
-                      <h3>Tie Dye</h3>
-                      <div class="rating">
-                        <svg>
-                          <use xlink:href="./images/sprite.svg#icon-star-full"></use>
-                        </svg>
-                        <svg>
-                          <use xlink:href="./images/sprite.svg#icon-star-full"></use>
-                        </svg>
-                        <svg>
-                          <use xlink:href="./images/sprite.svg#icon-star-full"></use>
-                        </svg>
-                        <svg>
-                          <use xlink:href="./images/sprite.svg#icon-star-full"></use>
-                        </svg>
-                        <svg>
-                          <use xlink:href="./images/sprite.svg#icon-star-empty"></use>
-                        </svg>
-                      </div>
-                      <div class="product__price">
-                        <h4>50rs</h4>
-                      </div>
-                      <a href="#"><button type="submit" class="product__btn">Add To Cart</button></a>
-                    </div>
-                    <ul>
-                      <li>
-                        <a data-tip="Quick View" data-place="left" href="#">
-                          <svg>
-                            <use xlink:href="./images/sprite.svg#icon-eye"></use>
-                          </svg>
-                        </a>
-                      </li>
-                      <li>
-                        <a data-tip="Add To Wishlist" data-place="left" href="#">
-                          <svg>
-                            <use xlink:href="./images/sprite.svg#icon-heart-o"></use>
-                          </svg>
-                        </a>
-                      </li>
-                      <li>
-                        <a data-tip="Add To Compare" data-place="left" href="#">
-                          <svg>
-                            <use xlink:href="./images/sprite.svg#icon-loop2"></use>
-                          </svg>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </li>
-                <li class="glide__slide">
-                  <div class="product">
-                    <div class="product__header">
-                      <img src="./images/products/soap/product1.jpg" alt="product">
-                    </div>
-                    <div class="product__footer">
-                      <h3>Organic Coffee & Neem</h3>
-                      <div class="rating">
-                        <svg>
-                          <use xlink:href="./images/sprite.svg#icon-star-full"></use>
-                        </svg>
-                        <svg>
-                          <use xlink:href="./images/sprite.svg#icon-star-full"></use>
-                        </svg>
-                        <svg>
-                          <use xlink:href="./images/sprite.svg#icon-star-full"></use>
-                        </svg>
-                        <svg>
-                          <use xlink:href="./images/sprite.svg#icon-star-full"></use>
-                        </svg>
-                        <svg>
-                          <use xlink:href="./images/sprite.svg#icon-star-empty"></use>
-                        </svg>
-                      </div>
-                      <div class="product__price">
-                        <h4>50rs</h4>
-                      </div>
-                      <a href="#"><button type="submit" class="product__btn">Add To Cart</button></a>
-                    </div>
-                    <ul>
-                      <li>
-                        <a data-tip="Quick View" data-place="left" href="#">
-                          <svg>
-                            <use xlink:href="./images/sprite.svg#icon-eye"></use>
-                          </svg>
-                        </a>
-                      </li>
-                      <li>
-                        <a data-tip="Add To Wishlist" data-place="left" href="#">
-                          <svg>
-                            <use xlink:href="./images/sprite.svg#icon-heart-o"></use>
-                          </svg>
-                        </a>
-                      </li>
-                      <li>
-                        <a data-tip="Add To Compare" data-place="left" href="#">
-                          <svg>
-                            <use xlink:href="./images/sprite.svg#icon-loop2"></use>
-                          </svg>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </li>
-                <li class="glide__slide">
-                  <div class="product">
-                    <div class="product__header">
-                      <img src="./images/products/soap/product2.jpg" alt="product">
-                    </div>
-                    <div class="product__footer">
-                      <h3>Organic Lemon</h3>
-                      <div class="rating">
-                        <svg>
-                          <use xlink:href="./images/sprite.svg#icon-star-full"></use>
-                        </svg>
-                        <svg>
-                          <use xlink:href="./images/sprite.svg#icon-star-full"></use>
-                        </svg>
-                        <svg>
-                          <use xlink:href="./images/sprite.svg#icon-star-full"></use>
-                        </svg>
-                        <svg>
-                          <use xlink:href="./images/sprite.svg#icon-star-full"></use>
-                        </svg>
-                        <svg>
-                          <use xlink:href="./images/sprite.svg#icon-star-empty"></use>
-                        </svg>
-                      </div>
-                      <div class="product__price">
-                        <h4>50rs</h4>
-                      </div>
-                      <a href="#"><button type="submit" class="product__btn">Add To Cart</button></a>
-                    </div>
-                    <ul>
-                      <li>
-                        <a data-tip="Quick View" data-place="left" href="#">
-                          <svg>
-                            <use xlink:href="./images/sprite.svg#icon-eye"></use>
-                          </svg>
-                        </a>
-                      </li>
-                      <li>
-                        <a data-tip="Add To Wishlist" data-place="left" href="#">
-                          <svg>
-                            <use xlink:href="./images/sprite.svg#icon-heart-o"></use>
-                          </svg>
-                        </a>
-                      </li>
-                      <li>
-                        <a data-tip="Add To Compare" data-place="left" href="#">
-                          <svg>
-                            <use xlink:href="./images/sprite.svg#icon-loop2"></use>
-                          </svg>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </li>
-                <li class="glide__slide">
-                  <div class="product">
-                    <div class="product__header">
-                      <img src="./images/products/soap/product3.jpg" alt="product">
-                    </div>
-                    <div class="product__footer">
-                      <h3>Pure Mint</h3>
-                      <div class="rating">
-                        <svg>
-                          <use xlink:href="./images/sprite.svg#icon-star-full"></use>
-                        </svg>
-                        <svg>
-                          <use xlink:href="./images/sprite.svg#icon-star-full"></use>
-                        </svg>
-                        <svg>
-                          <use xlink:href="./images/sprite.svg#icon-star-full"></use>
-                        </svg>
-                        <svg>
-                          <use xlink:href="./images/sprite.svg#icon-star-full"></use>
-                        </svg>
-                        <svg>
-                          <use xlink:href="./images/sprite.svg#icon-star-empty"></use>
-                        </svg>
-                      </div>
-                      <div class="product__price">
-                        <h4>30rs</h4>
-                      </div>
-                      <a href="#"><button type="submit" class="product__btn">Add To Cart</button></a>
-                    </div>
-                    <ul>
-                      <li>
-                        <a data-tip="Quick View" data-place="left" href="#">
-                          <svg>
-                            <use xlink:href="./images/sprite.svg#icon-eye"></use>
-                          </svg>
-                        </a>
-                      </li>
-                      <li>
-                        <a data-tip="Add To Wishlist" data-place="left" href="#">
-                          <svg>
-                            <use xlink:href="./images/sprite.svg#icon-heart-o"></use>
-                          </svg>
-                        </a>
-                      </li>
-                      <li>
-                        <a data-tip="Add To Compare" data-place="left" href="#">
-                          <svg>
-                            <use xlink:href="./images/sprite.svg#icon-loop2"></use>
-                          </svg>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </li>
-                <li class="glide__slide">
-                  <div class="product">
-                    <div class="product__header">
-                      <img src="./images/products/soap/product4.jpg" alt="product">
-                    </div>
-                    <div class="product__footer">
-                      <h3>Natural Rose</h3>
-                      <div class="rating">
-                        <svg>
-                          <use xlink:href="./images/sprite.svg#icon-star-full"></use>
-                        </svg>
-                        <svg>
-                          <use xlink:href="./images/sprite.svg#icon-star-full"></use>
-                        </svg>
-                        <svg>
-                          <use xlink:href="./images/sprite.svg#icon-star-full"></use>
-                        </svg>
-                        <svg>
-                          <use xlink:href="./images/sprite.svg#icon-star-full"></use>
-                        </svg>
-                        <svg>
-                          <use xlink:href="./images/sprite.svg#icon-star-empty"></use>
-                        </svg>
-                      </div>
-                      <div class="product__price">
-                        <h4>60rs</h4>
-                      </div>
-                      <a href="#"><button type="submit" class="product__btn">Add To Cart</button></a>
-                    </div>
-                    <ul>
-                      <li>
-                        <a data-tip="Quick View" data-place="left" href="#">
-                          <svg>
-                            <use xlink:href="./images/sprite.svg#icon-eye"></use>
-                          </svg>
-                        </a>
-                      </li>
-                      <li>
-                        <a data-tip="Add To Wishlist" data-place="left" href="#">
-                          <svg>
-                            <use xlink:href="./images/sprite.svg#icon-heart-o"></use>
-                          </svg>
-                        </a>
-                      </li>
-                      <li>
-                        <a data-tip="Add To Compare" data-place="left" href="#">
-                          <svg>
-                            <use xlink:href="./images/sprite.svg#icon-loop2"></use>
-                          </svg>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </li>
-                <li class="glide__slide">
-                  <div class="product">
-                    <div class="product__header">
-                      <img src="./images/products/soap/product5.jpg" alt="product">
-                    </div>
-                    <div class="product__footer">
-                      <h3>Coconut Milk</h3>
-                      <div class="rating">
-                        <svg>
-                          <use xlink:href="./images/sprite.svg#icon-star-full"></use>
-                        </svg>
-                        <svg>
-                          <use xlink:href="./images/sprite.svg#icon-star-full"></use>
-                        </svg>
-                        <svg>
-                          <use xlink:href="./images/sprite.svg#icon-star-full"></use>
-                        </svg>
-                        <svg>
-                          <use xlink:href="./images/sprite.svg#icon-star-full"></use>
-                        </svg>
-                        <svg>
-                          <use xlink:href="./images/sprite.svg#icon-star-empty"></use>
-                        </svg>
-                      </div>
-                      <div class="product__price">
-                        <h4>50rs</h4>
-                      </div>
-                      <a href="#"><button type="submit" class="product__btn">Add To Cart</button></a>
-                    </div>
-                    <ul>
-                      <li>
-                        <a data-tip="Quick View" data-place="left" href="#">
-                          <svg>
-                            <use xlink:href="./images/sprite.svg#icon-eye"></use>
-                          </svg>
-                        </a>
-                      </li>
-                      <li>
-                        <a data-tip="Add To Wishlist" data-place="left" href="#">
-                          <svg>
-                            <use xlink:href="./images/sprite.svg#icon-heart-o"></use>
-                          </svg>
-                        </a>
-                      </li>
-                      <li>
-                        <a data-tip="Add To Compare" data-place="left" href="#">
-                          <svg>
-                            <use xlink:href="./images/sprite.svg#icon-loop2"></use>
-                          </svg>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </li>
-                <li class="glide__slide">
-                  <div class="product">
-                    <div class="product__header">
-                      <img src="./images/products/soap/product6.jpg" alt="product">
-                    </div>
-                    <div class="product__footer">
-                      <h3>Coconut Milk</h3>
-                      <div class="rating">
-                        <svg>
-                          <use xlink:href="./images/sprite.svg#icon-star-full"></use>
-                        </svg>
-                        <svg>
-                          <use xlink:href="./images/sprite.svg#icon-star-full"></use>
-                        </svg>
-                        <svg>
-                          <use xlink:href="./images/sprite.svg#icon-star-full"></use>
-                        </svg>
-                        <svg>
-                          <use xlink:href="./images/sprite.svg#icon-star-full"></use>
-                        </svg>
-                        <svg>
-                          <use xlink:href="./images/sprite.svg#icon-star-empty"></use>
-                        </svg>
-                      </div>
-                      <div class="product__price">
-                        <h4>50rs</h4>
-                      </div>
-                      <a href="#"><button type="submit" class="product__btn">Add To Cart</button></a>
-                    </div>
-                    <ul>
-                      <li>
-                        <a data-tip="Quick View" data-place="left" href="#">
-                          <svg>
-                            <use xlink:href="./images/sprite.svg#icon-eye"></use>
-                          </svg>
-                        </a>
-                      </li>
-                      <li>
-                        <a data-tip="Add To Wishlist" data-place="left" href="#">
-                          <svg>
-                            <use xlink:href="./images/sprite.svg#icon-heart-o"></use>
-                          </svg>
-                        </a>
-                      </li>
-                      <li>
-                        <a data-tip="Add To Compare" data-place="left" href="#">
-                          <svg>
-                            <use xlink:href="./images/sprite.svg#icon-loop2"></use>
-                          </svg>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
+                <?php
+                  while($row = $result->fetch_assoc())
+                  {
+                    $soap_name = $row["name"];
+                    $soap_image = $row["photo"];
+                    $soap_price = $row["price"];
+                    $soap_data = base64_encode($soap_image);
 
+                    echo '<li class="glide__slide">';
+                    echo '<div class="product">';
+                    echo '<div class="product__header">';
+                    echo '<img src="data:image/jpeg;base64,' . $soap_data . '" alt="' . $soap_name . '">';
+                    echo '</div';
+                    echo '<div class="product__footer">';
+                    echo '<h3>' . $soap_name . '</h3>';
+                    echo '<div class="rating">';
+                    echo '<svg>
+                            <use xlink:href="./images/sprite.svg#icon-star-full"></use>
+                          </svg>
+                          <svg>
+                            <use xlink:href="./images/sprite.svg#icon-star-full"></use>
+                          </svg>
+                          <svg>
+                            <use xlink:href="./images/sprite.svg#icon-star-full"></use>
+                          </svg>
+                          <svg>
+                            <use xlink:href="./images/sprite.svg#icon-star-full"></use>
+                          </svg>
+                          <svg>
+                            <use xlink:href="./images/sprite.svg#icon-star-empty"></use>
+                          </svg>';
+                    echo '</div>';
+                    echo '<div class="product__price">';
+                    echo '<h4>' . $soap_price . 'rs</h4>';
+                    echo '</div>';
+                    echo '<a href="#"><button type="submit" class="product__btn">Add To Cart</button></a>';
+                    echo '</div>';
+                    echo '<ul>';
+                    echo '<li>
+                            <a data-tip="Quick View" data-place="left" href="#">
+                              <svg>
+                                <use xlink:href="./images/sprite.svg#icon-eye"></use>
+                              </svg>
+                            </a>
+                          </li>
+                          <li>
+                            <a data-tip="Add To Wishlist" data-place="left" href="#">
+                              <svg>
+                                <use xlink:href="./images/sprite.svg#icon-heart-o"></use>
+                              </svg>
+                            </a>
+                          </li>
+                          <li>
+                            <a data-tip="Add To Compare" data-place="left" href="#">
+                              <svg>
+                                <use xlink:href="./images/sprite.svg#icon-loop2"></use>
+                              </svg>
+                            </a>
+                          </li>';
+                    echo '</ul>';
+                    echo '</div>';
+                    echo '</li>';
+                  }
+                ?>
               </ul>
             </div>
-
             <div class="glide__arrows" data-glide-el="controls">
               <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
                 <svg>
@@ -1040,50 +626,13 @@
               <form action="login.php" method="post">
                 <input type="text" name="username" placeholder="Username" class="popup__form">
                 <input type="password" name="password" placeholder="Password" class="popup__form">
-                <button class="submit" type="submit" id="submit">submit</button>
+                <button class="submit btn-success" type="submit" id="submit">submit</button>
               </form>
               <p>Don't have an account? <a href="registration.php"><strong>Sign Up</strong></a></p>
             </div>
         </div>
     </div>
 </div>
-<!-- Popup 3 (New Popup) -->
-<!-- <div class="popup4 hide__popup" id="RegisterPopup">
-    <div class="popup__content centered">
-        <div class="popup__close">
-            <svg>
-                <use xlink:href="./images/sprite.svg#icon-cross"></use>
-            </svg>
-        </div>
-        <div class="centered-content">
-            <div class="register-form glide">
-               <h1>Sign Up</h1><br>
-              <hr><br>
-              <form action="registration.php" method="post">
-                <label for="">First Name</label>
-                <input type="text" name="fname" placeholder="Enter here" class="popup__form">
-                <label for="">Last Name</label>
-                <input type="text" name="lname" placeholder="Enter here" class="popup__form"><br>
-                <label for="">Email</label>
-                <input type="email" name="email" placeholder="Enter here" class="popup__form">
-                <label for="Mobile_number">Mobile number</label><br>
-                <select name="contry-code" id="contry-code" name="contry-code" class="custom-input">
-                  <option value="+91">+91 (India)</option>
-                  <option value="+1">+1 (USA)</option>
-                </select><br>
-                <label for="">Date Of Birth</label>
-                <input type="date" name="dob" placeholder="" class="custom-input"><br>
-                <label for="">Password</label>
-                <input type="password" name="password" placeholder="Password" class="popup__form">
-                <label for="">confirm password</label>
-                <input type="password" name="con_password" placeholder="Password" class="custom-input"><br><br>
-                <button class="submit" type="submit" id="submit">submit</button>
-              </form>
-            </div>
-        </div>
-    </div>
-</div> -->
-
   <!-- Go To -->
 
   <a href="#header" class="goto-top scroll-link">
