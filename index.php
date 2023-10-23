@@ -1,6 +1,7 @@
 <?php
+  session_start();
   include './common/db_connection.php';
-  $sql = "SELECT photo, name, price FROM products";
+  $sql = "SELECT p_id, photo, name, price FROM products";
   $result = $conn->query($sql);
 
   if ($result === false) {
@@ -199,6 +200,7 @@
                 <?php
                   while($row = $result->fetch_assoc())
                   {
+                    $soap_id = $row["p_id"];
                     $soap_name = $row["name"];
                     $soap_image = $row["photo"];
                     $soap_price = $row["price"];
@@ -207,7 +209,7 @@
                     echo '<li class="glide__slide">';
                     echo '<div class="product">';
                     echo '<div class="product__header">';
-                    echo '<img src="data:image/jpeg;base64,' . $soap_data . '" alt="' . $soap_name . '">';
+                    echo '<a href="product.php?product_id=' . $soap_id . '"><img src="data:image/jpeg;base64,' . $soap_data . '" alt="' . $soap_name . '"></a>';
                     echo '</div';
                     echo '<div class="product__footer">';
                     echo '<h3>' . $soap_name . '</h3>';
@@ -231,11 +233,11 @@
                     echo '<div class="product__price">';
                     echo '<h4>' . $soap_price . 'rs</h4>';
                     echo '</div>';
-                    echo '<a href="#"><button type="submit" class="product__btn">Add To Cart</button></a>';
+                    echo '<a href="add_to_cart.php?product_id=' . $soap_id . '"><button type="submit" class="product__btn">Add To Cart</button></a>';
                     echo '</div>';
                     echo '<ul>';
                     echo '<li>
-                            <a data-tip="Quick View" data-place="left" href="#">
+                            <a data-tip="Quick View" data-place="left" href="product.php?product_id=' . $soap_id . '">
                               <svg>
                                 <use xlink:href="./images/sprite.svg#icon-eye"></use>
                               </svg>
@@ -623,10 +625,10 @@
             <div class="login-form glide">
                <h1>June Login</h1><br>
               <hr><br>
-              <form action="login.php" method="post">
-                <input type="text" name="username" placeholder="Username" class="popup__form">
+              <form action="login.php " method="post">
+                <input type="email" name="email" placeholder="email" class="popup__form">
                 <input type="password" name="password" placeholder="Password" class="popup__form">
-                <button class="submit btn-success" type="submit" id="submit">submit</button>
+                <button class="submit btn-success" name="login" type="submit" id="login">submit</button>
               </form>
               <p>Don't have an account? <a href="registration.php"><strong>Sign Up</strong></a></p>
             </div>

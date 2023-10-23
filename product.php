@@ -1,67 +1,96 @@
 <?php
-  include './common/CommonHeader.php';
-?>
+include './common/CommonHeader.php';
+include './common/db_connection.php';
 
-    <div class="page__title-area">
-      <div class="container">
-        <div class="page__title-container">
-          <ul class="page__titles">
-            <li>
-              <a href="/">
-                <svg>
-                  <use xlink:href="./images/sprite.svg#icon-home"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="page__title">Glycerin Honey</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </header>
+// Check if the 'product_id' GET parameter is set
+if (isset($_GET['product_id'])) {
+    // Retrieve the product ID from the GET parameter
+    $product_id = $_GET['product_id'];
 
-  <main id="main">
-    <div class="container">
-      <!-- Products Details -->
-      <section class="section product-details__section">
-        <div class="product-detail__container">
-          <div class="product-detail__left">
-            <div class="details__container--left">
-              <div class="product__picture" id="product__picture">
-                <!-- <div class="rect" id="rect"></div> -->
-                <div class="picture__container">
-                  <img src="./images/products/soap/product3.jpg" id="pic" />
-                </div>
-              </div>
-              <div class="zoom" id="zoom"></div>
-            </div>
+    // Prepare and execute the SQL query
+    $sql = "SELECT * FROM products WHERE p_id = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("i", $product_id);
+    $stmt->execute();
+    $result = $stmt->get_result();
 
-            <div class="product-details__btn">
-              <a class="add" href="#">
-                <span>
-                  <svg>
-                    <use xlink:href="./images/sprite.svg#icon-cart-plus"></use>
-                  </svg>
-                </span>
+    if ($result->num_rows > 0) {
+        // Product details were found
+        $product = $result->fetch_assoc();
+        $soap_data = base64_encode($product['photo']);
+        $soap_price = $product["price"];
+        $soap_name = $product["name"];
+        $soap_id = $product['p_id'];
+        $subtotal = 0;
+        $subtotal = $soap_price+50;
+
+        // Output product details on your webpage
+        echo '<div class="page__title-area">';
+        echo '<div class="container">';
+        echo '<div class="page__title-container">';
+        echo '<ul class="page__titles">';
+        echo '<li>';
+        echo '<a href="/">';
+        echo '<svg>';
+        echo '<use xlink:href="./images/sprite.svg#icon-home"></use>';
+        echo '</svg>';
+        echo '</a>';
+        echo '</li>';
+        // Check if the 'name' key exists before accessing it
+        if (isset($product['name'])) {
+            echo '<li class="page__title">' . $product['name'] . '</li>';
+        }
+        echo '</ul>';
+        echo '</div>';
+        echo '</div>';
+        echo '</div>';
+
+        // Display the product image, price, and other details
+        echo '<section class="section product-details__section">';
+        echo '<div class="container">';
+        echo '<div class="product-detail__container">';
+        echo '<div class="product-detail__left">';
+        echo '<div class="details__container--left">';
+        echo '<div class="product__picture" id="product__picture">';
+        if (isset($product['photo'])) {
+            echo '<div class="picture__container">';
+            echo '<img src="data:image/jpeg;base64,' . $soap_data . '" alt="' . $product['name'] . '">';
+            echo '</div>';
+        }
+        echo '</div>';
+        echo '<div class="zoom" id="zoom"></div>';
+        echo '</div>';
+        echo '<div class="product-details__btn">
+                <a class="add" href="add_to_cart.php?product_id=' . $soap_id . '">
+                    <span>
+                        <svg>
+                            <use xlink:href="./images/sprite.svg#icon-cart-plus"></use>
+                        </svg>
+                    </span>
                 ADD TO CART</a>
-              <a class="buy" href="#">
-                <span>
-                  <svg>
-                    <use xlink:href="./images/sprite.svg#icon-credit-card"></use>
-                  </svg>
-                </span>
+                <a class="buy" href="#">
+                    <span>
+                        <svg>
+                            <use xlink:href="./images/sprite.svg#icon-credit-card"></use>
+                        </svg>
+                    </span>
                 BUY NOW
-              </a>
-            </div>
-          </div>
-
-          <div class="product-detail__right">
-            <div class="product-detail__content">
-              <h3>Glycerin Honey</h3>
-              <div class="price">
-                <span class="new__price">750rs</span>
-              </div>
-              <div class="product__review">
+                </a>
+                </div>
+            </div>';
+        // Display product details on the right side
+        echo '<div class="product-detail__right">';
+        echo '<div class="product-detail__content">';
+        if (isset($product['name'])) {
+            echo '<h3>' . $product['name'] . '</h3>';
+        }
+        echo '<div class="price">';
+        if (isset($product['price'])) {
+            echo '<span class="new__price">' . $product['price'] . 'rs</span>';
+        }
+        echo '</div>';
+        // Add more details here
+        echo '<div class="product__review">
                 <div class="rating">
                   <svg>
                     <use xlink:href="./images/sprite.svg#icon-star-full"></use>
@@ -80,42 +109,38 @@
                   </svg>
                 </div>
                 <a href="#" class="rating__quatity">3 reviews</a>
-              </div>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
-                a doloribus iste natus et facere?
-                dolor sit amet consectetur adipisicing elit. Sunt
-                a doloribus iste natus et facere?
-              </p>
-              <div class="product__info-container">
-                <ul class="product__info">
-                  <li>
-                    <div class="input-counter">
-                      <span>Quantity:</span>
-                      <div>
+              </div>';
+        if (isset($product['details'])) {
+            echo '<p>' . $product['details'] . '</p>';
+        }
+        echo '<div class="product__info-container">
+        <ul class="product__info">
+            <li>
+                <div class="input-counter">
+                    <span>Quantity:</span>
+                    <div>
                         <span class="minus-btn">
-                          <svg>
-                            <use xlink:href="./images/sprite.svg#icon-minus"></use>
-                          </svg>
+                            <svg>
+                                <use xlink:href="./images/sprite.svg#icon-minus"></use>
+                            </svg>
                         </span>
                         <input type="text" min="1" value="1" max="10" class="counter-btn">
                         <span class="plus-btn">
-                          <svg>
-                            <use xlink:href="./images/sprite.svg#icon-plus"></use>
-                          </svg>
+                            <svg>
+                                <use xlink:href="./images/sprite.svg#icon-plus"></use>
+                            </svg>
                         </span>
-                      </div>
                     </div>
-                  </li>
-
-                  <li>
-                    <span>Subtotal:</span>
-                    <a href="#" class="new__price">800rs</a>
-                  </li>
-                  <li>
+                </div>
+            </li>
+            <li>
+                <span>Subtotal:</span>';
+        echo '<a href="#" class="new__price">' . $subtotal . '</a>
+            </li>
+                <li>
                     <span>Availability:</span>
                     <a href="#" class="in-stock">In Stock (7 Items)</a>
-                  </li>
+                </li>
                 </ul>
                 <div class="product-info__btn">
                   <a href="#">
@@ -133,7 +158,7 @@
                       </svg>
                     </span>&nbsp;
                     SHIPPING
-                  </a>
+                    </a>
                   <a href="#">
                     <span>
                       <svg>
@@ -143,55 +168,26 @@
                     ASK ABOUT THIS PRODUCT
                   </a>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-    <!-- Facility Section -->
-    <section class="facility__section section" id="facility">
-      <div class="container">
-        <div class="facility__contianer">
-          <div class="facility__box">
-            <div class="facility-img__container">
-              <svg>
-                <use xlink:href="./images/sprite.svg#icon-airplane"></use>
-              </svg>
-            </div>
-            <p>ALL KERALA FREE SHIPPINGE</p>
-          </div>
+        ';
+        // ...
+        echo '</div>';
+        echo '</div>';
+        echo '</div>';
+        echo '</div>';
+        echo '</section>';
 
-          <div class="facility__box">
-            <div class="facility-img__container">
-              <svg>
-                <use xlink:href="./images/sprite.svg#icon-credit-card-alt"></use>
-              </svg>
-            </div>
-            <p>100% MONEY BACK GUARANTEE IF NOT USED</p>
-          </div>
+    } else {
+        echo 'Product not found';
+    }
 
-          <div class="facility__box">
-            <div class="facility-img__container">
-              <svg>
-                <use xlink:href="./images/sprite.svg#icon-credit-card"></use>
-              </svg>
-            </div>
-            <p>MANY PAYMENT GATWAYS</p>
-          </div>
+    $conn->close();
+} else {
+    echo 'Product ID not provided';
+}
+?>
 
-          <div class="facility__box">
-            <div class="facility-img__container">
-              <svg>
-                <use xlink:href="./images/sprite.svg#icon-headphones"></use>
-              </svg>
-            </div>
-            <p>24/7 ONLINE SUPPORT</p>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
+</main>
 <?php
-  include './common/CommonFooter.php';
+include './common/CommonFacility.php';
+include './common/CommonFooter.php';
 ?>

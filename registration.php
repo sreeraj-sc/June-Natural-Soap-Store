@@ -1,3 +1,7 @@
+<?php
+    session_start();
+    include './common/db_connection.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -47,7 +51,7 @@
                   <label for="confirmpwd">Confirm Password</label>
                   <input type="password" class="form-control" id="confirmpwd" placeholder="Confirm Password" name="confirmpwd" required>
               </div>
-              <button type="submit" class="btn btn-primary">Submit</button>
+              <button type="submit" class="btn btn-primary" name="submit">Submit</button>
           </form>
         </div>
       </div>
@@ -72,7 +76,18 @@
             $sql = "INSERT INTO user_credentials(first_name, last_name, contry_code, mobile_number, email, date_of_birth, passphrase) VALUES ('$first_name', '$last_name', '$contry_code', '$mobile_number', '$email', '$date_of_birth', '$pass_hashed')";
             if($conn->query($sql) === TRUE)
             {
-                header("Location: home.php");
+                $_SESSION['username'] = $first_name;
+                $qry = "SELECT u_id, first_name FROM user_credentials";
+                $res = $conn->query($qry);
+                while($row = $res->fetch_assoc())
+                {
+                    if($row['first_name'] == $first_name)
+                    {
+                        echo "success";
+                        $_SESSION['uid'] = $row['u_id'];
+                    }
+                }
+                header("Location: index.php");
                 exit();
             }
             else

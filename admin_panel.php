@@ -1,8 +1,8 @@
 <?php
-    session_start();
-    //$uid = $_SESSION['uid'];
+    
     include './common/CommonHeader.php';
     include './common/db_connection.php';   
+    $uid = $_SESSION['uid'];
 ?>
 <style>
     .form-group
@@ -30,6 +30,25 @@
                 <input type="number" class="form-control" id="soapprice" name="price" placeholder="Enter soap price">
             </div>
             <div class="form-group">
+                <label for="status">Status</label>
+                <select id="status" name="status" class="form-control">
+                    <option value="Instock">Instock</option>
+                    <option value="OutOfStock">OutOfStock</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="rating">Rating</label>
+                <input type="number" class="form-control" id="rating" name="rating" placeholder="Enter rating 0 - 5">
+            </div>
+            <div class="form-group">
+                <label for="availability">Availability</label>
+                <input type="number" class="form-control" id="availability" name="availability" placeholder="Enter Availability">
+            </div>
+            <div class="form-group">
+                <label for="details">Details</label>
+                <textarea id="details" class="form-control" name="details" rows="4" placeholder="discription"></textarea><br>
+            </div><br><br>
+            <div class="form-group">
                 <Button type="submit" name="submit" class="btn-primary">Submit</Button>
             </div>
         </form>
@@ -41,8 +60,12 @@
         $imageData = file_get_contents($_FILES["image"]["tmp_name"]);
         $imageName = $_POST["soapname"];
         $imagePrice = $_POST["price"];
+        $imageStatus = $_POST['status'];
+        $imageRating = $_POST['rating'];
+        $imageAvailability = $_POST['availability'];
+        $imageDetails = $_POST['details'];
     
-        $stmt = $conn->prepare("INSERT INTO products (photo, name, price) VALUES (?, ?, ?)");
+        $stmt = $conn->prepare("INSERT INTO products (photo, name, price, status, rating, availability, details) VALUES (?, ?, ?, ?, ?, ?, ?)");
 
         if (!$stmt) {
             die("Error preparing the statement: " . $conn->error);
@@ -50,7 +73,7 @@
         
         
         // Use "ssd" for binding parameters
-        $stmt->bind_param("ssd", $imageData, $imageName, $imagePrice);
+        $stmt->bind_param("ssdsdds", $imageData, $imageName, $imagePrice, $imageStatus, $imageRating, $imageAvailability, $imageDetails);
     
         if ($stmt->execute()) {
             echo '<script type="text/javascript">
