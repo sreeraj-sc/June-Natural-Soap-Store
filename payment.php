@@ -1,10 +1,7 @@
 <?php
-session_start();
 include './common/db_connection.php';
-$id = $_SESSION['uid'];
-$price = $_REQUEST['price'];
-$bid = $_REQUEST['bid'];
-$cid = $_REQUEST['id'];
+include './common/CommonHeader.php';
+$uid = $_SESSION['uid'];
 ?>
 
 <!DOCTYPE html>
@@ -13,9 +10,14 @@ $cid = $_REQUEST['id'];
 <head>
   <meta charset="UTF-8" />
   <title>June-payment</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" />
   <link rel="stylesheet" href="./style/payment.css" />
   <script src="./script/payment.js" type="text/javascript"></script>
+  <style>
+    body
+    {
+      background: #fff;
+    }
+  </style>
 </head>
 
 <body>
