@@ -54,7 +54,7 @@ if (isset($_GET['product_id'])) {
         echo '<div class="product__picture" id="product__picture">';
         if (isset($product['photo'])) {
             echo '<div class="picture__container">';
-            echo '<img src="data:image/jpeg;base64,' . $soap_data . '" alt="' . $product['name'] . '">';
+            echo '<img src="data:image/jpeg;base64,' . $soap_data . '" alt="' . $product['name'] . '" style="height: 30rem; width: 80rem">';
             echo '</div>';
         }
         echo '</div>';
