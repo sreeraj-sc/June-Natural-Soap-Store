@@ -1,25 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&display=swap" rel="stylesheet" />
-
-  <link rel="shortcut icon" href="./images/June-logo-3.png" type="image/x-icon" />
-
-  <!-- Carousel -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.core.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.theme.min.css">
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
-  <!-- bootstrap -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  
-  <!-- Custom StyleSheet -->
-  <link rel="stylesheet" href="./styles/styles.css" />
-  <title>June</title>
+<?php
+    include './common/CommonHeader.php';
+?>
   <style>
     .form-control
     {
@@ -31,7 +12,6 @@
         color: black;
     }
   </style>
-</head>
 <body class="text-center">
     <center>
     <div class="m-5 p-5 form">
@@ -57,8 +37,7 @@
 </body>
 </html>
 <?php
-session_start();
-include './common/db_connection.php';
+include './common/CommonFooter.php';
 if(isset($_POST['login']))
 {
     $email = $_POST['email'];
@@ -80,6 +59,7 @@ if(isset($_POST['login']))
             $_SESSION['uname'] = $data['first_name'];
             if($pass_hashed === $data['passphrase'])
             {
+                
                 echo $_SESSION['uid'];
                 $p_id = $_GET['product_id'];
                 header('Location: add_to_cart.php?product_id=' . $p_id);

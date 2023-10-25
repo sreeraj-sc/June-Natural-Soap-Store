@@ -24,6 +24,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.theme.min.css">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
   <!-- Custom StyleSheet -->
   <link rel="stylesheet" href="./styles/styles.css" />
   <title>June</title>
@@ -74,7 +77,7 @@
           </div>
 
           <div class="nav__icons">
-            <a href="logornot.php" class="icon__item" id="login-btn" >
+            <a href="login.php" class="icon__item" id="login-btn" >
               <svg class="icon__user">
                 <use xlink:href="./images/sprite.svg#icon-user"></use>
               </svg>
@@ -499,15 +502,21 @@
             <h3>SUBSCRIBE TO OUR SOAP STORE</h3>
             <p>Receive a fresh delivery of handcrafted soap to your door every month,<br> with new scents and styles to discover.</p>
           </div>
-          <form action="#">
-            <input type="email" placeholder="Enter your email address" class="newsletter__email">
-            <a class="newsletter__link" href="#">subscribe</a>
+          <form action="" method="post">
+            <input type="email" name="email"  placeholder="Enter your email address" class="newsletter__email">
+            <button class="newsletter__link btn-dark" style="height: 5rem; width: 10rem" type="submit" name="subscribe">subscribe</button>
           </form>
         </div>
       </div>
-    </section>
-
-  </main>
+    </section>  
+    <?php
+    if(isset($_POST['subscribe']))
+    {
+      $sub_email = $_POST['email'];
+      $sql = "INSERT INTO subscribe (email) VALUES ('$sub_email')";
+      $conn->query($sql);
+    }
+    ?>
 
   <!-- End Main -->
 
@@ -605,15 +614,22 @@
           <h1>Get Discount <span>30%</span> Off</h1>
           <p>Sign up to our updates and save 30% for you next purchase. No spam, we promise!
           </p>
-          <form action="#">
-            <input type="email" placeholder="Enter your email..." class="popup__form">
-            <a href="#">Subscribe</a>
+          <form action="" method="post">
+            <input type="email" name="email"  placeholder="Enter your email..." class="newsletter__email popup__form">
+            <button class="newsletter__link btn-dark" style="height: 5rem; width: 10rem" type="submit" name="subscribe">subscribe</button>
           </form>
         </div>
       </div>
     </div>
   </div>
-
+  <?php
+    if(isset($_POST['subscribe']))
+    {
+      $sub_email = $_POST['email'];
+      $sql = "INSERT INTO subscribe (email) VALUES ('$sub_email')";
+      $conn->query($sql);
+    }
+    ?>
   <!-- Go To -->
 
   <a href="#header" class="goto-top scroll-link">
