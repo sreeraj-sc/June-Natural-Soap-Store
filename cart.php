@@ -1,8 +1,8 @@
 <?php
 include './common/CommonHeader.php';
-include './common/db_connection.php';
 
 $uid = $_SESSION['uid'];
+
 
 $cartQuery = "SELECT p_id FROM user_carts WHERE u_id = $uid";
 $cartResult = $conn->query($cartQuery);
@@ -21,7 +21,12 @@ while ($cartRow = $cartResult->fetch_assoc()) {
 
 
 $productQuery = "SELECT * FROM products WHERE p_id IN (";
-$productQuery .= implode(',', array_column($cartItems, 'p_id')) . ")";
+$cartItemIds = array_column($cartItems, 'p_id');
+if (empty($cartItemIds)) {
+    die("No products in the cart."); // Add appropriate error handling
+}
+$productQuery .= implode(',', $cartItemIds) . ")";
+
 
 $productResult = $conn->query($productQuery);
 
@@ -35,7 +40,6 @@ while ($productRow = $productResult->fetch_assoc()) {
     $productId = $productRow['p_id'];
     $products[$productId] = $productRow;
 }
-
 ?>
 
 <main id="main">
@@ -136,7 +140,7 @@ while ($productRow = $productResult->fetch_assoc()) {
                                 <span class="new__price"><?php echo $total?>rs</span>
                             </li>
                         </ul>
-                        <a href="payment.php">PROCEED TO CHECKOUT</a>
+                        <a href="payment.php?total=" . $total>PROCEED TO CHECKOUT</a>
                     </div>
                 </form>
             </div>
@@ -146,5 +150,4 @@ while ($productRow = $productResult->fetch_assoc()) {
 <?php
 include './common/CommonFacility.php';
 include './common/CommonFooter.php';
-$conn->close();
 ?>

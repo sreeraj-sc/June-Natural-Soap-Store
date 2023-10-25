@@ -1,6 +1,7 @@
 <?php
-    session_start();
+    //$uid = $_SESSION['uid'];
     include './common/db_connection.php';
+    session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -18,13 +19,19 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.theme.min.css">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
-  <!-- bootstrap -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <!-- Custom StyleSheet -->
   <link rel="stylesheet" href="./styles/styles.css" />
   <script src="./scripts/index.js"></script>
   <title>June</title>
+  <style>
+    .form-group
+    {
+    width: 60rem;
+    height: 6rem;
+    }   
+</style>
 </head>
 <body>
   <!-- Header -->
@@ -55,33 +62,30 @@
             </div>
             <ul class="nav__list">
               <li class="nav__item">
-                <a href="index.php" class="nav__link scroll-link">Home</a>
+                <a href="add_product.php" class="nav__link scroll-link">add product</a>
               </li>
               <li class="nav__item">
-                <a href="#category" class="nav__link scroll-link">Category</a>
+                <a href="remove_update.php" class="nav__link scroll-link">remove or updates</a>
               </li>
               <li class="nav__item">
-                <a href="#news" class="nav__link scroll-link">Blog</a>
+                <a href="#news" class="nav__link scroll-link">booking</a>
               </li>
               <li class="nav__item">
-                <a href="#contact" class="nav__link scroll-link">Contact</a>
+                <a href="#contact" class="nav__link scroll-link">history</a>
               </li>
             </ul>
           </div>
-
           <div class="nav__icons">
             <a href="login.php" class="icon__item" id="login-btn" onclick="">
               <svg class="icon__user">
                 <use xlink:href="./images/sprite.svg#icon-user"></use>
               </svg>
             </a>
-
             <a href="#" class="icon__item" id="search-btn">
               <svg class="icon__search">
                 <use xlink:href="./images/sprite.svg#icon-search"></use>
               </svg>
             </a>
-
             <a href="cart.php" class="icon__item" id="cart-btn">
               <svg class="icon__cart">
                 <use xlink:href="./images/sprite.svg#icon-shopping-basket"></use>
@@ -93,4 +97,3 @@
       </div>
     </div>
   </header>
-</body>

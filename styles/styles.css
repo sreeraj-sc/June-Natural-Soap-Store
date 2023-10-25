@@ -1050,7 +1050,6 @@ Category Center
     object-fit: contain;
   }
 }
-
 /*
 ======================
 Pop Up
@@ -2669,3 +2668,41 @@ a{
   border: 1px solid #ccc;
   margin-bottom: 10px;
 } 
+.loadingio-spinner-eclipse-s4e7bqbqw8 {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  overflow: hidden;
+  background: none;
+ }
+ .ldio-m8lfqmfyf0f {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform: translateZ(0) scale(1);
+  backface-visibility: hidden;
+  transform-origin: 0 0; /* see note above */
+ }
+ .ldio-m8lfqmfyf0f div {
+  box-sizing: content-box;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  animation: ldio-m8lfqmfyf0f 1s linear infinite;
+  border: 2px solid #458aeb;
+  border-bottom-color: transparent;
+ }
+ @keyframes ldio-m8lfqmfyf0f {
+   0% {
+     transform: rotate(0deg);
+  }
+   50% {
+     transform: rotate(180deg);
+  }
+   100% {
+     transform: rotate(360deg);
+  }
+ }

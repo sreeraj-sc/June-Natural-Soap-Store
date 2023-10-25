@@ -25,7 +25,7 @@
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
   <!-- Custom StyleSheet -->
-  <link rel="stylesheet" href="style/home_page.css" />
+  <link rel="stylesheet" href="./styles/styles.css" />
   <title>June</title>
 </head>
 
@@ -74,7 +74,7 @@
           </div>
 
           <div class="nav__icons">
-            <a href="#" class="icon__item" id="login-btn" onclick="openLoginPopup()">
+            <a href="logornot.php" class="icon__item" id="login-btn" >
               <svg class="icon__user">
                 <use xlink:href="./images/sprite.svg#icon-user"></use>
               </svg>
@@ -107,7 +107,7 @@
                 <div class="hero__left">
                   <h1 class="">June Natural Soap</h1>
                   <p>Happiness Is Handmade</p>
-                  <a href="#latest"><button class="hero__btn">SHOP NOW</button></a>
+                  <a href="logornot.php"><button class="hero__btn">SHOP NOW</button></a>
                 </div>
                 <div class="hero__right">
                   <div class="hero__img-container">
@@ -121,7 +121,7 @@
                 <div class="hero__left">
                   <h1 class="">June Natural Soap</h1>
                   <p>Happiness Is Handmade</p>
-                  <a href="#latest"><button class="hero__btn">SHOP NOW</button></a>
+                  <a href="logornot.php"><button class="hero__btn">SHOP NOW</button></a>
                 </div>
                 <div class="hero__right">
                   <img class="banner_02" src="./images/banner_02.png" alt="banner2" />
@@ -167,7 +167,7 @@
               <div class="collection__data">
                 <span>New Colors Introduced</span>
                 <h1>Pure Mint</h1>
-                <a href="#shop">SHOP NOW</a>
+                <a href="logornot.php">SHOP NOW</a>
               </div>
             </div>
           </div>
@@ -179,7 +179,7 @@
               <div class="collection__data">
                 <span>New Flavours</span>
                 <h1>Coffee & Neem</h1>
-                <a href="#">SHOP NOW</a>
+                <a href="logornot.php">SHOP NOW</a>
               </div>
             </div>
           </div>
@@ -233,7 +233,7 @@
                     echo '<div class="product__price">';
                     echo '<h4>' . $soap_price . 'rs</h4>';
                     echo '</div>';
-                    echo '<a href="add_to_cart.php?product_id=' . $soap_id . '"><button type="submit" class="product__btn">Add To Cart</button></a>';
+                    echo '<a href="logornot.php?product_id=' . $soap_id . '"><button type="submit" class="product__btn">Add To Cart</button></a>';
                     echo '</div>';
                     echo '<ul>';
                     echo '<li>
@@ -613,28 +613,7 @@
       </div>
     </div>
   </div>
-<!-- Popup 2 (New Popup) -->
-<div class="popup2 hide__popup" id="loginPopup">
-    <div class="popup__content centered">
-        <div class="popup__close">
-            <svg>
-                <use xlink:href="./images/sprite.svg#icon-cross"></use>
-            </svg>
-        </div>
-        <div class="centered-content">
-            <div class="login-form glide">
-               <h1>June Login</h1><br>
-              <hr><br>
-              <form action="login.php " method="post">
-                <input type="email" name="email" placeholder="email" class="popup__form">
-                <input type="password" name="password" placeholder="Password" class="popup__form">
-                <button class="submit btn-success" name="login" type="submit" id="login">submit</button>
-              </form>
-              <p>Don't have an account? <a href="registration.php"><strong>Sign Up</strong></a></p>
-            </div>
-        </div>
-    </div>
-</div>
+
   <!-- Go To -->
 
   <a href="#header" class="goto-top scroll-link">
@@ -650,9 +629,9 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
   <!-- Custom JavaScript -->
-  <script src="./script/products.js"></script>
-  <script src="./script/index.js"></script>
-  <script src="./script/slider.js"></script>
+
+  <script src="./scripts/index.js"></script>
+  <script src="./scripts/slider.js"></script>
 </body>
 
 </html>

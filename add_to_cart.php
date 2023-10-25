@@ -22,6 +22,7 @@ if ($check_result->num_rows > 0) {
 
     if ($insert_stmt->execute()) {
         echo "Product added to the cart successfully.";
+        header("Location: index.php");
     } else {
         echo "Error adding product to the cart: " . $insert_stmt->error;
     }
@@ -29,4 +30,9 @@ if ($check_result->num_rows > 0) {
 }
 
 $check_stmt->close();
+include './common/CommonHeader.php';
 ?>
+<div class="loadingio-spinner-eclipse-s4e7bqbqw8"><div class="ldio-m8lfqmfyf0f">
+    <div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div>
+    </div></div>
+

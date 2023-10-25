@@ -179,8 +179,6 @@ if (isset($_GET['product_id'])) {
     } else {
         echo 'Product not found';
     }
-
-    $conn->close();
 } else {
     echo 'Product ID not provided';
 }
