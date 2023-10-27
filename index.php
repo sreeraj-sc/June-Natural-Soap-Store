@@ -48,6 +48,28 @@ else {
   <!-- Custom StyleSheet -->
   <link rel="stylesheet" href="./styles/styles.css" />
   <title>June</title>
+  <style>
+    .form-group
+    {
+    width: 60rem;
+    height: 6rem;
+    }   
+    /* Add this CSS to your stylesheet */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff; /* Set your desired background color */
+  z-index: 1000; /* Adjust the z-index to ensure it's above other elements */
+}
+
+/* Add some padding to the content to prevent it from being hidden behind the fixed header */
+.main-content {
+  padding-top: 100px; /* Adjust the padding-top value as needed */
+}
+
+</style>
 </head>
 
 <body>
@@ -126,7 +148,8 @@ else {
         </nav>
       </div>
     </div>
-    
+</header>
+<section>
     <!-- Hero -->
     <div class="hero">
       <div class="glide" id="glide_1">
@@ -180,7 +203,7 @@ else {
         </div>
       </div>
     </div>
-  </header>
+</section>
   <!-- End Header -->
 
   <!-- Main -->

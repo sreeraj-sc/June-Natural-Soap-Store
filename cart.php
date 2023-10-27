@@ -5,8 +5,8 @@ include './common/db_connection.php';
 if (!isset($_SESSION['uid'])) {
     $_SESSION['p_no'] = 0;
     echo '<center>
-    <div class="m-5 p-5">
-    <h2 class="text-danger">You Need To Log In First</h2>
+    <div class="m-5 p-5 mt-5">
+    <h2 class="text-danger mt-5">You Need To Log In First</h2>
     </div>
 </center>';
   }
@@ -31,8 +31,8 @@ while ($cartRow = $cartResult->fetch_assoc()) {
 
 if (empty($cartItems)) {
     echo '<center>
-    <div class="m-5 p-5">
-    <h2 class="text-danger">No Product Where added to cart</h2>
+    <div class="m-5 p-5 mt-5">
+    <h2 class="text-danger mt-5">No Product Where added to cart</h2>
     </div>
 </center>';
   }
@@ -51,7 +51,7 @@ while ($productRow = $productResult->fetch_assoc()) {
 }
 ?>
 
-<main id="main">
+<main id="main" class="mt-5 p-5">
     <section class="section cart__area">
         <div class="container">
             <div class="responsive__cart-area">

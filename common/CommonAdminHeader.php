@@ -67,14 +67,6 @@
           </div>
 
           <div class="nav__menu">
-            <div class="menu__top">
-              <span class="nav__category">JUNE</span>
-              <a href="#" class="close__toggle">
-                <svg>
-                  <use xlink:href="./images/sprite.svg#icon-cross"></use>
-                </svg>
-              </a>
-            </div>
             <ul class="nav__list">
               <li class="nav__item">
                 <a href="add_product.php" class="nav__link scroll-link pr-5">add product</a>
@@ -86,13 +78,10 @@
                 <a href="booking.php" class="nav__link scroll-link pr-5">booking</a>
               </li>
               <li class="nav__item">
-                <a href="#news" class="nav__link scroll-link pr-5">blog update</a>
-              </li>
-              <li class="nav__item">
                 <a href="#contact" class="nav__link scroll-link pr-5">history</a>
               </li>
               <li class="nav__item">
-                <a href="logout.php" class="nav__link scroll-link pr-5">log out</a>
+                <a href="login.php" class="nav__link scroll-link pr-5">log out</a>
               </li>
             </ul>
           </div>

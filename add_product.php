@@ -3,9 +3,9 @@
     include './common/db_connection.php';
     include './common/CommonAdminHeader.php';
 ?>
-<div class="container mt-5 ">
+<div class="container mt-5 p-5 ">
     <center>
-        <h1>Add Soap</h1><br>
+        <h1 class="mt-5 p-5"><strong>Add Soap</strong></h1>
         <hr>
         <br>
         <form action="" method="post" enctype="multipart/form-data">

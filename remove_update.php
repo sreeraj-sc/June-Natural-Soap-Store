@@ -7,7 +7,10 @@ if ($result === false) {
     die("Error in SQL query: " . $conn->error);
 }
 
-echo '<div class="container mt-5 p-5">';
+echo '<div class="container mt-5 p-5" >';
+echo '<center class="mt-5">
+        <h1><strong>Remove Products</strong></h1>
+    </center>';
 while($row = $result->fetch_assoc())
 {
     echo '<div class="row mb-4">';
@@ -19,7 +22,7 @@ while($row = $result->fetch_assoc())
         $soap_price = $row["price"];
         $soap_data = base64_encode($soap_image);
         
-        echo '<div class="col-md-4">';
+        echo '<div class="col-md-4 mt-5">';
         echo '<div class="card c-1">';
         echo '<img class="card-img-top img-fluid" style="height: 20rem; width: 50rem" src="data:image/jpeg;base64,' . $soap_data . '" alt="' . $soap_name . '">';
         echo '<div class="card-body">';
