@@ -90,6 +90,9 @@ if ($_SESSION['uid'] == null) {
               <li class="nav__item">
                 <a href="#contact" class="nav__link scroll-link">Contact</a>
               </li>
+              <li class="nav__item">
+                <a href="logout.php" class="nav__link scroll-link">log out</a>
+              </li>
             </ul>
           </div>
 
@@ -97,6 +100,12 @@ if ($_SESSION['uid'] == null) {
             <a href="login.php" class="icon__item" id="login-btn" >
               <svg class="icon__user">
                 <use xlink:href="./images/sprite.svg#icon-user"></use>
+              </svg>
+            </a>
+            
+            <a href="wishlist.php" class="icon__item" id="wishlist-btn" onclick="">
+              <svg class="icon__user">
+                <use xlink:href="./images/sprite.svg#icon-heart-o"></use>
               </svg>
             </a>
 
@@ -264,7 +273,7 @@ if ($_SESSION['uid'] == null) {
                             </a>
                           </li>
                           <li>
-                            <a data-tip="Add To Wishlist" data-place="left" href="#">
+                            <a href="logornot_wishlist.php?product_id=' . $soap_id . '" data-place="left">
                               <svg>
                                 <use xlink:href="./images/sprite.svg#icon-heart-o"></use>
                               </svg>

@@ -1,5 +1,4 @@
 <?php
-session_start();
 include './common/CommonHeader.php';
 include './common/db_connection.php';
 
@@ -136,7 +135,7 @@ while ($productRow = $productResult->fetch_assoc()) {
                                 <span class="new__price"><?php echo $total?>rs</span>
                             </li>
                         </ul>
-                        <a href="payment.php?total=" . $total>PROCEED TO CHECKOUT</a>
+                        <a href="payment.php?total=<?php echo $total; ?>">PROCEED TO CHECKOUT</a>
                     </div>
                 </form>
             </div>

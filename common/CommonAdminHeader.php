@@ -62,39 +62,24 @@
             </div>
             <ul class="nav__list">
               <li class="nav__item">
-                <a href="add_product.php" class="nav__link scroll-link">add product</a>
+                <a href="add_product.php" class="nav__link scroll-link pr-5">add product</a>
               </li>
               <li class="nav__item">
-                <a href="remove_update.php" class="nav__link scroll-link">remove or updates</a>
+                <a href="remove_update.php" class="nav__link scroll-link pr-5">remove or updates</a>
               </li>
               <li class="nav__item">
-                <a href="#news" class="nav__link scroll-link">booking</a>
+                <a href="#news" class="nav__link scroll-link pr-5">booking</a>
               </li>
               <li class="nav__item">
-                <a href="#news" class="nav__link scroll-link">blog update</a>
+                <a href="#news" class="nav__link scroll-link pr-5">blog update</a>
               </li>
               <li class="nav__item">
-                <a href="#contact" class="nav__link scroll-link">history</a>
+                <a href="#contact" class="nav__link scroll-link pr-5">history</a>
+              </li>
+              <li class="nav__item">
+                <a href="logout.php" class="nav__link scroll-link pr-5">log out</a>
               </li>
             </ul>
-          </div>
-          <div class="nav__icons">
-            <a href="login.php" class="icon__item" id="login-btn" onclick="">
-              <svg class="icon__user">
-                <use xlink:href="./images/sprite.svg#icon-user"></use>
-              </svg>
-            </a>
-            <a href="#" class="icon__item" id="search-btn">
-              <svg class="icon__search">
-                <use xlink:href="./images/sprite.svg#icon-search"></use>
-              </svg>
-            </a>
-            <a href="cart.php" class="icon__item" id="cart-btn">
-              <svg class="icon__cart">
-                <use xlink:href="./images/sprite.svg#icon-shopping-basket"></use>
-              </svg>
-              <span id="cart__total">3</span>
-            </a>
           </div>
         </nav>
       </div>

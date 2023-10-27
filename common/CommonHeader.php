@@ -1,4 +1,5 @@
 <?php
+  session_start();
   include './common/db_connection.php';
   if ($_SESSION['uid'] == null) {
     $_SESSION['p_no'] = 0;
@@ -80,6 +81,9 @@
               <li class="nav__item">
                 <a href="#contact" class="nav__link scroll-link">Contact</a>
               </li>
+              <li class="nav__item">
+                <a href="logout.php" class="nav__link scroll-link">log out</a>
+              </li>
             </ul>
           </div>
 
@@ -87,6 +91,13 @@
             <a href="login.php" class="icon__item" id="login-btn" onclick="">
               <svg class="icon__user">
                 <use xlink:href="./images/sprite.svg#icon-user"></use>
+              </svg>
+            </a>
+
+            <div class="nav__icons">
+            <a href="wishlist.php" class="icon__item" id="wishlist-btn" onclick="">
+              <svg class="icon__user">
+                <use xlink:href="./images/sprite.svg#icon-heart-o"></use>
               </svg>
             </a>
 
