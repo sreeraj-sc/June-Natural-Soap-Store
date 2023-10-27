@@ -65,10 +65,10 @@
                 <a href="add_product.php" class="nav__link scroll-link pr-5">add product</a>
               </li>
               <li class="nav__item">
-                <a href="remove_update.php" class="nav__link scroll-link pr-5">remove or updates</a>
+                <a href="remove_update.php" class="nav__link scroll-link pr-5">remove</a>
               </li>
               <li class="nav__item">
-                <a href="#news" class="nav__link scroll-link pr-5">booking</a>
+                <a href="booking.php" class="nav__link scroll-link pr-5">booking</a>
               </li>
               <li class="nav__item">
                 <a href="#news" class="nav__link scroll-link pr-5">blog update</a>

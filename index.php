@@ -136,7 +136,7 @@ if ($_SESSION['uid'] == null) {
                 <div class="hero__left">
                   <h1 class="">June Natural Soap</h1>
                   <p>Happiness Is Handmade</p>
-                  <a href="logornot.php"><button class="hero__btn">SHOP NOW</button></a>
+                  <a href="#latest"><button class="hero__btn">SHOP NOW</button></a>
                 </div>
                 <div class="hero__right">
                   <div class="hero__img-container">
@@ -150,7 +150,7 @@ if ($_SESSION['uid'] == null) {
                 <div class="hero__left">
                   <h1 class="">June Natural Soap</h1>
                   <p>Happiness Is Handmade</p>
-                  <a href="logornot.php"><button class="hero__btn">SHOP NOW</button></a>
+                  <a href="#latest"><button class="hero__btn">SHOP NOW</button></a>
                 </div>
                 <div class="hero__right">
                   <img class="banner_02" src="./images/banner_02.png" alt="banner2" />
@@ -196,7 +196,7 @@ if ($_SESSION['uid'] == null) {
               <div class="collection__data">
                 <span>New Colors Introduced</span>
                 <h1>Pure Mint</h1>
-                <a href="logornot.php">SHOP NOW</a>
+                <a href="#latest">SHOP NOW</a>
               </div>
             </div>
           </div>
@@ -208,7 +208,7 @@ if ($_SESSION['uid'] == null) {
               <div class="collection__data">
                 <span>New Flavours</span>
                 <h1>Coffee & Neem</h1>
-                <a href="logornot.php">SHOP NOW</a>
+                <a href="#latest">SHOP NOW</a>
               </div>
             </div>
           </div>
@@ -219,7 +219,7 @@ if ($_SESSION['uid'] == null) {
         <div class="title__container">
           <div class="section__title active" data-id="Latest Products">
             <span class="dot"></span>
-            <h1 class="primary__title">Latest Products</h1>
+            <h1 class="primary__title">All Products</h1>
           </div>
         </div>
         <div class="container" data-aos="fade-up" data-aos-duration="1200">
@@ -238,7 +238,7 @@ if ($_SESSION['uid'] == null) {
                     echo '<li class="glide__slide">';
                     echo '<div class="product">';
                     echo '<div class="product__header">';
-                    echo '<a href="product.php?product_id=' . $soap_id . '"><img src="data:image/jpeg;base64,' . $soap_data . '" alt="' . $soap_name . '"></a>';
+                    echo '<a href="product.php?product_id=' . $soap_id . '"><img style="height: 11rem; width: 50rem" src="data:image/jpeg;base64,' . $soap_data . '" alt="' . $soap_name . '"></a>';
                     echo '</div';
                     echo '<div class="product__footer">';
                     echo '<h3>' . $soap_name . '</h3>';
@@ -311,35 +311,6 @@ if ($_SESSION['uid'] == null) {
 
       <section class="category__section section" id="category">
         <div class="tab__list">
-          <div class="title__container tabs">
-            <div class="section__titles category__titles ">
-              <div class="section__title filter-btn active" data-id="All Products">
-                <span class="dot"></span>
-                <h1 class="primary__title">All Products</h1>
-              </div>
-            </div>
-            <div class="section__titles">
-              <div class="section__title filter-btn" data-id="Trending Products">
-                <span class="dot"></span>
-                <h1 class="primary__title">Trending Products</h1>
-              </div>
-            </div>
-
-            <div class="section__titles">
-              <div class="section__title filter-btn" data-id="Special Products">
-                <span class="dot"></span>
-                <h1 class="primary__title">Special Products</h1>
-              </div>
-            </div>
-
-            <div class="section__titles">
-              <div class="section__title filter-btn" data-id="Featured Products">
-                <span class="dot"></span>
-                <h1 class="primary__title">Latest Products</h1>
-              </div>
-            </div>
-
-          </div>
         </div>
         <div class="category__container" data-aos="fade-up" data-aos-duration="1200">
           <div class="category__center"></div>

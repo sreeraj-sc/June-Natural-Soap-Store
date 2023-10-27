@@ -21,9 +21,13 @@ while ($cartRow = $cartResult->fetch_assoc()) {
 
 if (empty($cartItems)) {
     echo '<center>
-    <h2 class="text-danger">No Product Where added to wishlist</h2>
+    <div class="m-5 p-5">
+    <h2 class="text-danger">No Product Where added to cart</h2>
+    </div>
 </center>';
   }
+  else
+  {
 $productQuery = "SELECT * FROM products WHERE p_id IN (";
 $productQuery .= implode(',', array_column($cartItems, 'p_id')) . ")";
 
@@ -63,7 +67,7 @@ while ($productRow = $productResult->fetch_assoc()) {
                                     <tr>
                                         <td class="product__thumbnail">
                                             <a href="#">
-                                                <img src="<?php echo $product[$productId]['photo']; ?>" alt="Product Image">
+                                                <img style="height: 10rem; width: 20rem" src="data:image/jpeg;base64,<?php echo base64_encode($product['photo']); ?>" alt="Product Image">
                                             </a>
                                         </td>
                                         <td class="product__name">
@@ -101,6 +105,7 @@ while ($productRow = $productResult->fetch_assoc()) {
     </section>
 </main>
 <?php
+  }
 include './common/CommonFacility.php';
 include './common/CommonFooter.php';
 $conn->close();

@@ -30,7 +30,7 @@ if (isset($_GET['product_id'])) {
         echo '<div class="page__title-container">';
         echo '<ul class="page__titles">';
         echo '<li>';
-        echo '<a href="/">';
+        echo '<a href="index.php">';
         echo '<svg>';
         echo '<use xlink:href="./images/sprite.svg#icon-home"></use>';
         echo '</svg>';
@@ -67,8 +67,8 @@ if (isset($_GET['product_id'])) {
                             <use xlink:href="./images/sprite.svg#icon-cart-plus"></use>
                         </svg>
                     </span>
-                ADD TO CART</a>
-                <a class="buy" href="#">
+                ADD TO CART</a>';
+        echo  ' <a class="buy" href="payment.php?product_id=' . $soap_id . '">
                     <span>
                         <svg>
                             <use xlink:href="./images/sprite.svg#icon-credit-card"></use>
