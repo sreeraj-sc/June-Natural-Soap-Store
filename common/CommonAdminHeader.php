@@ -71,6 +71,9 @@
                 <a href="#news" class="nav__link scroll-link">booking</a>
               </li>
               <li class="nav__item">
+                <a href="#news" class="nav__link scroll-link">blog update</a>
+              </li>
+              <li class="nav__item">
                 <a href="#contact" class="nav__link scroll-link">history</a>
               </li>
             </ul>

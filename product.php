@@ -188,4 +188,5 @@ if (isset($_GET['product_id'])) {
 <?php
 include './common/CommonFacility.php';
 include './common/CommonFooter.php';
+$conn->close();
 ?>

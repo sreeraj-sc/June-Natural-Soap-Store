@@ -1,8 +1,9 @@
 <?php
+session_start();
 include './common/CommonHeader.php';
+include './common/db_connection.php';
 
 $uid = $_SESSION['uid'];
-
 
 $cartQuery = "SELECT p_id FROM user_carts WHERE u_id = $uid";
 $cartResult = $conn->query($cartQuery);
@@ -19,20 +20,15 @@ while ($cartRow = $cartResult->fetch_assoc()) {
     $cartItems[] = array('p_id' => $productId);
 }
 
-
+if (empty($cartItems)) {
+    echo '<center>
+    <h2 class="text-danger">No Product Where added to cart</h2>
+</center>';
+  }
 $productQuery = "SELECT * FROM products WHERE p_id IN (";
-$cartItemIds = array_column($cartItems, 'p_id');
-if (empty($cartItemIds)) {
-    die("No products in the cart."); // Add appropriate error handling
-}
-$productQuery .= implode(',', $cartItemIds) . ")";
-
+$productQuery .= implode(',', array_column($cartItems, 'p_id')) . ")";
 
 $productResult = $conn->query($productQuery);
-
-if ($productResult === false) {
-    die("Error executing product query: " . $conn->error);
-}
 
 $products = array();
 
@@ -90,7 +86,7 @@ while ($productRow = $productResult->fetch_assoc()) {
                                                             <use xlink:href="./images/sprite.svg#icon-minus"></use>
                                                         </svg>
                                                     </span>
-                                                    <input type="text" min="1" value="" max="10" class="counter-btn">
+                                                    <input type="number" min="1" value="1" max="10" class="counter-btn">
                                                     <span class="plus-btn">
                                                         <svg>
                                                             <use xlink:href="./images/sprite.svg#icon-plus"></use>
@@ -103,7 +99,7 @@ while ($productRow = $productResult->fetch_assoc()) {
                                             <div class="price">
                                                 <span class="new__price"><?php echo $product['price'];?></span>
                                             </div>
-                                            <a href="#" class="remove__cart-item">
+                                            <a href="remove_from_cart.php?product_id=<?php echo $productId; ?>" class="remove__cart-item">
                                                 <svg>
                                                     <use xlink:href="./images/sprite.svg#icon-trash"></use>
                                                 </svg>
@@ -150,4 +146,5 @@ while ($productRow = $productResult->fetch_assoc()) {
 <?php
 include './common/CommonFacility.php';
 include './common/CommonFooter.php';
+$conn->close();
 ?>

@@ -1,5 +1,7 @@
 <?php
     include './common/CommonHeader.php';
+    include './common/db_connection.php';
+    ob_start();
 ?>
   <style>
     .form-control
@@ -38,6 +40,7 @@
 </html>
 <?php
 include './common/CommonFooter.php';
+
 if(isset($_POST['login']))
 {
     $email = $_POST['email'];
@@ -71,4 +74,5 @@ if(isset($_POST['login']))
         }
     }
 }
+ob_end_flush()
 ?>

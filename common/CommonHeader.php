@@ -1,6 +1,20 @@
 <?php
-    session_start();
-    include './common/db_connection.php';
+  include './common/db_connection.php';
+  if ($_SESSION['uid'] == null) {
+    $_SESSION['p_no'] = 0;
+  } else {
+    $uid = $_SESSION['uid'];
+    $countQuery = "SELECT COUNT(p_id) FROM user_carts WHERE u_id = $uid";
+    $countResult = $conn->query($countQuery);
+  
+    if ($countResult === false) {
+      die("Error in SQL query: " . $conn->error);
+    }
+  
+    $countRow = $countResult->fetch_row();
+    $productCount = $countRow[0];
+    $_SESSION['p_no'] = $productCount;
+  }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -86,7 +100,7 @@
               <svg class="icon__cart">
                 <use xlink:href="./images/sprite.svg#icon-shopping-basket"></use>
               </svg>
-              <span id="cart__total">3</span>
+              <span id="cart__total"><?php echo $_SESSION['p_no']; ?></span>
             </a>
           </div>
         </nav>

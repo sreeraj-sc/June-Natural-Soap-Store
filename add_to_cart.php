@@ -13,15 +13,15 @@ $check_stmt->execute();
 $check_result = $check_stmt->get_result();
 
 if ($check_result->num_rows > 0) {
-    header('Location: product.php?product_id=' . $product_id . '');
-} else {
+    header("Location: index.php");
+} 
+else {
     // Insert the product into the cart
     $insert_sql = "INSERT INTO user_carts (u_id, p_id) VALUES (?, ?)";
     $insert_stmt = $conn->prepare($insert_sql);
     $insert_stmt->bind_param("ii", $user_id, $product_id);
 
     if ($insert_stmt->execute()) {
-        echo "Product added to the cart successfully.";
         header("Location: index.php");
     } else {
         echo "Error adding product to the cart: " . $insert_stmt->error;
@@ -32,7 +32,8 @@ if ($check_result->num_rows > 0) {
 $check_stmt->close();
 include './common/CommonHeader.php';
 ?>
+<center>
 <div class="loadingio-spinner-eclipse-s4e7bqbqw8"><div class="ldio-m8lfqmfyf0f">
     <div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div>
     </div></div>
-
+</center>
