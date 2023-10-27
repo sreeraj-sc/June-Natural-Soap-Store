@@ -2,6 +2,16 @@
 include './common/CommonHeader.php';
 include './common/db_connection.php';
 
+if (!isset($_SESSION['uid'])) {
+    $_SESSION['p_no'] = 0;
+    echo '<center>
+    <div class="m-5 p-5">
+    <h2 class="text-danger">You Need To Log In First</h2>
+    </div>
+</center>';
+  }
+  else
+  {
 $uid = $_SESSION['uid'];
 
 $cartQuery = "SELECT p_id FROM user_carts WHERE u_id = $uid";
@@ -133,7 +143,7 @@ while ($productRow = $productResult->fetch_assoc()) {
                             <li>
                                 Shipping
                                 <span>50rs</span>
-                            </li>
+                            </li>   
                             <li>
                                 Total
                                 <span class="new__price"><?php echo $total?>rs</span>
@@ -151,6 +161,7 @@ while ($productRow = $productResult->fetch_assoc()) {
                             
 </main>
 <?php
+  }
 include './common/CommonFacility.php';
 include './common/CommonFooter.php';
 $conn->close();

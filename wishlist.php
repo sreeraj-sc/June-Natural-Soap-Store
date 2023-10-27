@@ -1,9 +1,17 @@
 <?php
 include './common/CommonHeader.php';
 include './common/db_connection.php';
-
-$uid = $_SESSION['uid'];
-
+if (!isset($_SESSION['uid'])) {
+    $_SESSION['p_no'] = 0;
+    echo '<center>
+    <div class="m-5 p-5">
+    <h2 class="text-danger">You Need To Log In First</h2>
+    </div>
+</center>';
+  }
+else
+{
+    $uid = $_SESSION['uid'];
 $cartQuery = "SELECT p_id FROM user_wishlist WHERE u_id = $uid";
 $cartResult = $conn->query($cartQuery);
 
@@ -104,6 +112,7 @@ while ($productRow = $productResult->fetch_assoc()) {
 </main>
 <?php
   }
+}
 include './common/CommonFacility.php';
 include './common/CommonFooter.php';
 $conn->close();
