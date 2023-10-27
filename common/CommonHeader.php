@@ -81,6 +81,9 @@
               <li class="nav__item">
                 <a href="#contact" class="nav__link scroll-link">Contact</a>
               </li>
+              <li class="nav__item">
+                <a href="logout.php" class="nav__link scroll-link">log out</a>
+              </li>
             </ul>
           </div>
 
