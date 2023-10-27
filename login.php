@@ -1,7 +1,7 @@
 <?php
+    ob_start();
     include './common/CommonHeader.php';
     include './common/db_connection.php';
-    ob_start();
 ?>
   <style>
     .form-control

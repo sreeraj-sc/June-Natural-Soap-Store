@@ -2,6 +2,7 @@
 include './common/db_connection.php';
 include './common/CommonHeader.php';
 $uid = $_SESSION['uid'];
+$price = $_GET['pay_total'];
 ?>
 
 <!DOCTYPE html>
@@ -16,6 +17,12 @@ $uid = $_SESSION['uid'];
     body
     {
       background: #fff;
+    }
+    .pay_btn
+    {
+        width: 51rem;
+        height: 5rem;
+        border-radius: 5rem;
     }
   </style>
 </head>
@@ -128,23 +135,23 @@ $uid = $_SESSION['uid'];
         <div class="card-form__inner">
           <div class="card-input">
             <label for="cardNumber" class="card-input__label">Card Number</label>
-            <input type="text" id="cardNumber" class="card-input__input" v-mask="generateCardNumberMask" v-model="cardNumber" v-on:focus="focusInput" v-on:blur="blurInput" data-ref="cardNumber" autocomplete="off" required />
+            <input type="text" id="cardNumber" class="card-input__input" name="cardnumber" v-mask="generateCardNumberMask" v-model="cardNumber" v-on:focus="focusInput" v-on:blur="blurInput" data-ref="cardNumber" autocomplete="off" required />
           </div>
           <div class="card-input">
-            <label for="cardName" class="card-input__label">Card Holders</label>
-            <input type="text" id="cardName" class="card-input__input" v-model="cardName" v-on:focus="focusInput" v-on:blur="blurInput" data-ref="cardName" autocomplete="off" required />
+            <label for="cardName" class="card-input__label">Card Holders Name</label>
+            <input type="text" id="cardName" class="card-input__input" name="cardholder" v-model="cardName" v-on:focus="focusInput" v-on:blur="blurInput" data-ref="cardName" autocomplete="off" required />
           </div>
           <div class="card-form__row">
             <div class="card-form__col">
               <div class="card-form__group">
                 <label for="cardMonth" class="card-input__label">Expiration Date</label>
-                <select class="card-input__input -select" id="cardMonth" v-model="cardMonth" v-on:focus="focusInput" v-on:blur="blurInput" data-ref="cardDate" required>
+                <select class="card-input__input -select" id="cardMonth" name="cardmonth" v-model="cardMonth" v-on:focus="focusInput" v-on:blur="blurInput" data-ref="cardDate" required>
                   <option value="" disabled selected>Month</option>
                   <option v-bind:value="n < 10 ? '0' + n : n" v-for="n in 12" v-bind:disabled="n < minCardMonth" v-bind:key="n">
                     {{n < 10 ? '0' + n : n}}
                   </option>
                 </select>
-                <select class="card-input__input -select" id="cardYear" v-model="cardYear" v-on:focus="focusInput" v-on:blur="blurInput" data-ref="cardDate" required>
+                <select class="card-input__input -select" id="cardYear" name="cardyear" v-model="cardYear" v-on:focus="focusInput" v-on:blur="blurInput" data-ref="cardDate" required>
                   <option value="" disabled selected>Year</option>
                   <option v-bind:value="$index + minCardYear" v-for="(n, $index) in 12" v-bind:key="n">
                     {{$index + minCardYear}}
@@ -155,13 +162,15 @@ $uid = $_SESSION['uid'];
             <div class="card-form__col -cvv">
               <div class="card-input">
                 <label for="cardCvv" class="card-input__label">CVV</label>
-                <input type="text" class="card-input__input" id="cardCvv" v-mask="'####'" maxlength="3" v-model="cardCvv" v-on:focus="flipCard(true)" v-on:blur="flipCard(false)" autocomplete="off" required />
+                <input type="text" class="card-input__input" id="cardCvv" name="cardcvv" v-mask="'####'" maxlength="3" v-model="cardCvv" v-on:focus="flipCard(true)" v-on:blur="flipCard(false)" autocomplete="off" required />
               </div>
             </div>
           </div>
-          <button class="card-form__button" type="submit" name="payNow">&#8377;
-            <?php echo $price ?>
-          </button>
+          <center>
+            <button class="btn-dark pay_btn" type="submit" name="paynow">Pay &#8377;
+                <?php echo $price ?>
+            </button>
+          </center>
         </div>
       </form>
     </div>
@@ -263,16 +272,29 @@ $uid = $_SESSION['uid'];
 </html>
 
 <?php
-if (isset($_REQUEST['payNow'])) {
-  $qry = "UPDATE `book` SET `status`='Paid' WHERE `bid`='$bid' AND `status`='Requested'";
-  $qry1 = "UPDATE `car` SET `cstatus`='sold' WHERE `cid`='$cid' AND `cstatus`='not paid'";
+    if(isset($_POST['paynow']))
+    {
+        $cardnumber = $_POST['cardnumber'];
+        $cardholder = $_POST['cardholder'];
+        $cardmonth = $_POST['cardmonth'];
+        $cardyear = $_POST['cardyear'];
+        $cardcvv = $_POST['cardcvv'];
 
-  if ($conn->query($qry) === TRUE && $conn->query($qry1) === TRUE) {
-    echo "<script>alert('Successfully Paid'); window.location = 'ViewBooking.php';</script>";
-  } else {
-    $error_message = "Error updating payment status: " . mysqli_error($conn);
-    echo "<script>alert('$error_message');</script>";
-  }
-}
-
+        $sql = "INSERT INTO user_creditcard(u_id, cardnumber, cardholder, cardmonth, cardyear, cardcvv, price) VALUES ('$uid', '$cardnumber', '$cardholder', '$cardmonth', '$cardyear', '$cardcvv', '$price')";
+        if($conn->query($sql) === TRUE)
+        {
+            if($_GET['fromcart'] == 100)
+            {
+            $sql = "DELETE FROM user_carts WHERE u_id = ?";
+            $stmt = $conn->prepare($sql);
+            mysqli_stmt_bind_param($stmt, "i", $uid);
+            $stmt->execute();
+            }
+            echo "<script>alert('Successfully Paid'); window.location = 'index.php';</script>";
+        }
+        else
+        {
+            echo "<script>alert('Successfully Unsuccessfull'); window.location = 'cart.php';</script>";
+        }
+    }
 ?>

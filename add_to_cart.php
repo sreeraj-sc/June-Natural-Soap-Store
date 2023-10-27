@@ -22,7 +22,7 @@ else {
     $insert_stmt->bind_param("ii", $user_id, $product_id);
 
     if ($insert_stmt->execute()) {
-        header("Location: index.php");
+        header("Location: index.php#latest");
     } else {
         echo "Error adding product to the cart: " . $insert_stmt->error;
     }

@@ -22,7 +22,7 @@ while ($cartRow = $cartResult->fetch_assoc()) {
 if (empty($cartItems)) {
     echo '<center>
     <div class="m-5 p-5">
-    <h2 class="text-danger">No Product Where added to cart</h2>
+    <h2 class="text-danger">No Product Where added to wishlist</h2>
     </div>
 </center>';
   }

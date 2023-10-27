@@ -19,7 +19,7 @@ if ($_SESSION['uid'] == null) {
         $check_result = $check_stmt->get_result();
 
         if ($check_result->num_rows > 0) {
-            header("Location: index.php");
+            header("Location: index.php#latest");
         } else {
             $insert_sql = "INSERT INTO user_wishlist (u_id, p_id) VALUES (?, ?)";
             $insert_stmt = $conn->prepare($insert_sql);
@@ -28,7 +28,7 @@ if ($_SESSION['uid'] == null) {
                 $insert_stmt->bind_param("ii", $user_id, $product_id);
 
                 if ($insert_stmt->execute()) {
-                    header('Location: index.php');
+                    header('Location: index.php#latest');
                 } else {
                     echo "Error adding product to the wishlist: " . $insert_stmt->error;
                 }

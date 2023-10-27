@@ -139,7 +139,7 @@ while ($productRow = $productResult->fetch_assoc()) {
                                 <span class="new__price"><?php echo $total?>rs</span>
                             </li>
                         </ul>
-                        <a href="payment.php?total=<?php echo $total; ?>">PROCEED TO CHECKOUT</a>
+                        <a href="creditcard.php?pay_total=<?php echo $total; ?>&fromcart=100">PROCEED TO CHECKOUT</a>
                     </div>
                 </form>
             </div>
