@@ -1,9 +1,10 @@
 <?php
   session_start();
   include './common/db_connection.php';
-  if ($_SESSION['uid'] == null) {
+  if (!isset($_SESSION['uid'])) {
     $_SESSION['p_no'] = 0;
-  } else {
+  }
+  else {
     $uid = $_SESSION['uid'];
     $countQuery = "SELECT COUNT(p_id) FROM user_carts WHERE u_id = $uid";
     $countResult = $conn->query($countQuery);
@@ -93,7 +94,7 @@
                 <use xlink:href="./images/sprite.svg#icon-user"></use>
               </svg>
             </a>
-            
+
             <a href="wishlist.php" class="icon__item" id="wishlist-btn" onclick="">
               <svg class="icon__user">
                 <use xlink:href="./images/sprite.svg#icon-heart-o"></use>

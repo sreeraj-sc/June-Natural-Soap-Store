@@ -8,7 +8,7 @@ if ($result === false) {
   die("Error in SQL query: " . $conn->error);
 }
 
-if ($_SESSION['uid'] == null) {
+if (!isset($_SESSION['uid'])) {
   $_SESSION['p_no'] = 0;
 }
 else {

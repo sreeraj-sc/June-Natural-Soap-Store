@@ -2,6 +2,9 @@
     ob_start();
     include './common/CommonHeader.php';
     include './common/db_connection.php';
+    if (!isset($_SESSION['uid'])) {
+        $_SESSION['p_no'] = 0;
+    }    
 ?>
   <style>
     .form-control
