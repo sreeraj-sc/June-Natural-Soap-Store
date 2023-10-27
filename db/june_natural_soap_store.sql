@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 27, 2023 at 03:57 PM
+-- Generation Time: Oct 27, 2023 at 06:15 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.0.28
 
@@ -97,12 +97,9 @@ CREATE TABLE `user_carts` (
 --
 
 INSERT INTO `user_carts` (`u_id`, `p_id`) VALUES
-(22, 13),
-(22, 16),
 (26, 0),
-(26, 13),
-(26, 16),
-(28, 13);
+(26, 14),
+(26, 24);
 
 -- --------------------------------------------------------
 
@@ -136,13 +133,26 @@ INSERT INTO `user_credentials` (`u_id`, `first_name`, `last_name`, `contry_code`
 --
 
 CREATE TABLE `user_creditcard` (
-  `u_id` varchar(10) NOT NULL,
+  `u_id` int(11) NOT NULL,
   `cardnumber` varchar(50) NOT NULL,
   `cardholder` varchar(200) NOT NULL,
   `cardmonth` varchar(30) NOT NULL,
   `cardyear` varchar(30) NOT NULL,
-  `cardcvv` varchar(30) NOT NULL
+  `cardcvv` varchar(30) NOT NULL,
+  `price` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `user_creditcard`
+--
+
+INSERT INTO `user_creditcard` (`u_id`, `cardnumber`, `cardholder`, `cardmonth`, `cardyear`, `cardcvv`, `price`) VALUES
+(0, '2384 2857 8524 7854', 'bvjsdbvsdvvk', '08', '2030', '473', '330'),
+(3, '8354 7857 4374 9854', 'jbcjkdjkkjdvd', '10', '2030', '234', '130'),
+(3, '8438 9723 7483 2742', 'nsdm,vnsdnv', '10', '2032', '231', '200'),
+(3, '3984 3275 2554 5243', 'bjdsvjksdnvlkdnv', '11', '2031', '324', '150'),
+(3, '3434 344234 43243', 'jvksnvkkvn', '10', '2032', '234', '280?fromcart=100'),
+(3, '8752 3598 4543 3344', 'asbcjvkjdvdkvdlkvds', '08', '2033', '434', '280');
 
 -- --------------------------------------------------------
 
@@ -163,7 +173,8 @@ INSERT INTO `user_wishlist` (`u_id`, `p_id`) VALUES
 (26, 13),
 (26, 14),
 (26, 15),
-(26, 16);
+(26, 16),
+(26, 24);
 
 --
 -- Indexes for dumped tables
@@ -193,12 +204,6 @@ ALTER TABLE `user_carts`
 ALTER TABLE `user_credentials`
   ADD PRIMARY KEY (`u_id`),
   ADD UNIQUE KEY `email` (`email`);
-
---
--- Indexes for table `user_creditcard`
---
-ALTER TABLE `user_creditcard`
-  ADD PRIMARY KEY (`u_id`);
 
 --
 -- Indexes for table `user_wishlist`
