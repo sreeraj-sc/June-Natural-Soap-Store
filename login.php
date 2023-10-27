@@ -62,10 +62,15 @@ if(isset($_POST['login']))
             $_SESSION['uname'] = $data['first_name'];
             if($pass_hashed === $data['passphrase'])
             {
-                
-                echo $_SESSION['uid'];
-                $p_id = $_GET['product_id'];
-                header('Location: add_to_cart.php?product_id=' . $p_id);
+                if($_GET['from_index'] == 100)
+                {
+                    header('Location: index.php');
+                }
+                else
+                {
+                    $p_id = $_GET['product_id'];
+                    header('Location: add_to_cart.php?product_id=' . $p_id);
+                }
             }
         }
         else

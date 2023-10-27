@@ -53,16 +53,14 @@ while ($productRow = $productResult->fetch_assoc()) {
                                     <th>PRODUCT</th>
                                     <th>NAME</th>
                                     <th>UNIT PRICE</th>
+                                    <th>REMOVE</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php
-                                $subtotal = 0;
                                 foreach ($cartItems as $cartItem) {
                                     $productId = $cartItem['p_id'];
                                     $product = $products[$productId];
-                                    $subtotal = $subtotal+$product['price'];
-                                    $total = $subtotal+50;
                                 ?>
                                     <tr>
                                         <td class="product__thumbnail">

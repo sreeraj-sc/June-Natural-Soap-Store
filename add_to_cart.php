@@ -13,7 +13,7 @@ $check_stmt->execute();
 $check_result = $check_stmt->get_result();
 
 if ($check_result->num_rows > 0) {
-    header("Location: index.php");
+    header("Location: index.php#latest");
 } 
 else {
     // Insert the product into the cart

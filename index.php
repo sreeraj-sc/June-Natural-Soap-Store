@@ -10,7 +10,8 @@ if ($result === false) {
 
 if ($_SESSION['uid'] == null) {
   $_SESSION['p_no'] = 0;
-} else {
+}
+else {
   $uid = $_SESSION['uid'];
   $countQuery = "SELECT COUNT(p_id) FROM user_carts WHERE u_id = $uid";
   $countResult = $conn->query($countQuery);
@@ -97,13 +98,13 @@ if ($_SESSION['uid'] == null) {
           </div>
 
           <div class="nav__icons">
-            <a href="login.php" class="icon__item" id="login-btn" >
+            <a href="login.php?from_index=100" class="icon__item" id="login-btn" >
               <svg class="icon__user">
                 <use xlink:href="./images/sprite.svg#icon-user"></use>
               </svg>
             </a>
             
-            <a href="wishlist.php" class="icon__item" id="wishlist-btn" onclick="">
+            <a href="wishlist.php" class="icon__item" id="wishlist-btn">
               <svg class="icon__user">
                 <use xlink:href="./images/sprite.svg#icon-heart-o"></use>
               </svg>
