@@ -78,10 +78,10 @@
                 <a href="booking.php" class="nav__link scroll-link pr-5">booking</a>
               </li>
               <li class="nav__item">
-                <a href="#contact" class="nav__link scroll-link pr-5">history</a>
+                <a href="history.php" class="nav__link scroll-link pr-5">history</a>
               </li>
               <li class="nav__item">
-                <a href="login.php" class="nav__link scroll-link pr-5">log out</a>
+                <a href="login.php?from_admin=555" class="nav__link scroll-link pr-5">log out</a>
               </li>
             </ul>
           </div>

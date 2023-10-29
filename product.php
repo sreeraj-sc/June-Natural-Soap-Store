@@ -68,7 +68,7 @@ if (isset($_GET['product_id'])) {
                         </svg>
                     </span>
                 ADD TO CART</a>';
-        echo  ' <a class="buy" href="creditcard.php?pay_total=' . $subtotal . '">
+        echo '<a  class="buy" href="creditcard.php?pay_total=' . $subtotal . '&fromcart=5&p_ids=' . $soap_id . '">
                     <span>
                         <svg>
                             <use xlink:href="./images/sprite.svg#icon-credit-card"></use>

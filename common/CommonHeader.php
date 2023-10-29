@@ -123,12 +123,6 @@
               </svg>
             </a>
 
-            <a href="#" class="icon__item" id="search-btn">
-              <svg class="icon__search">
-                <use xlink:href="./images/sprite.svg#icon-search"></use>
-              </svg>
-            </a>
-
             <a href="cart.php" class="icon__item" id="cart-btn">
               <svg class="icon__cart">
                 <use xlink:href="./images/sprite.svg#icon-shopping-basket"></use>

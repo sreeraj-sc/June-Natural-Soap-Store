@@ -24,6 +24,8 @@
     <input type="number" id="phnumber" class="form-control phnumber" name="mobile-number" placeholder="phone number" required autofocus><br>
     <label for="inputEmail" class="sr-only">Email address</label>
     <input type="email" id="inputEmail" class="form-control email" name="email" placeholder="Email address" required autofocus><br>
+    <label for="address" class="sr-only">Address</label>
+    <textarea id="address" class="form-control" name="address" rows="4" placeholder="address"></textarea><br>
     <label for="inputPassword" class="sr-only">Password</label>
     <input type="password" id="inputPassword" class="form-control password" name="pswd" placeholder="Password" required><br>
     <label for="inputcunpassword" class="sr-only">Cunfirm Password</label>
@@ -52,6 +54,7 @@
         $mobile_number = $_POST['mobile-number'];
         $email = $_POST['email'];
         //$date_of_birth = $_POST['dob'];
+        $address = $_POST['address'];
         $password = $_POST['pswd'];
         $pass_con = $_POST['confirmpwd'];
         if($password == $pass_con)

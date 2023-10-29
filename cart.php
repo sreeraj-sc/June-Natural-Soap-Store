@@ -44,11 +44,14 @@ $productQuery .= implode(',', array_column($cartItems, 'p_id')) . ")";
 $productResult = $conn->query($productQuery);
 
 $products = array();
+$p_ids = array();
 
 while ($productRow = $productResult->fetch_assoc()) {
     $productId = $productRow['p_id'];
+    $p_ids[] = $productId;
     $products[$productId] = $productRow;
 }
+$encodedp_ids = implode(',', $p_ids);
 ?>
 
 <main id="main" class="mt-5 p-5">
@@ -149,7 +152,7 @@ while ($productRow = $productResult->fetch_assoc()) {
                                 <span class="new__price"><?php echo $total?>rs</span>
                             </li>
                         </ul>
-                        <a href="creditcard.php?pay_total=<?php echo $total; ?>&fromcart=100">PROCEED TO CHECKOUT</a>
+                        <a href="creditcard.php?pay_total=<?php echo $total; ?>&fromcart=100&p_ids=<?php echo $encodedp_ids; ?>">PROCEED TO CHECKOUT</a>
                     </div>
                 </form>
             </div>

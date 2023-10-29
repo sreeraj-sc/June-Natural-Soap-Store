@@ -3,6 +3,8 @@ include './common/db_connection.php';
 include './common/CommonHeader.php';
 $uid = $_SESSION['uid'];
 $price = $_GET['pay_total'];
+$encodedp_ids = $_GET['p_ids'];
+$p_ids = explode(',', $encodedp_ids);
 ?>
 
 <!DOCTYPE html>
@@ -280,6 +282,8 @@ $price = $_GET['pay_total'];
         $cardyear = $_POST['cardyear'];
         $cardcvv = $_POST['cardcvv'];
 
+        // $uid, $price, $p_ids
+
         $sql = "INSERT INTO user_creditcard(u_id, cardnumber, cardholder, cardmonth, cardyear, cardcvv, price) VALUES ('$uid', '$cardnumber', '$cardholder', '$cardmonth', '$cardyear', '$cardcvv', '$price')";
         if($conn->query($sql) === TRUE)
         {
@@ -290,7 +294,12 @@ $price = $_GET['pay_total'];
             mysqli_stmt_bind_param($stmt, "i", $uid);
             $stmt->execute();
             }
-            echo "<script>alert('Successfully Paid'); window.location = 'index.php';</script>";
+            $p_ids_string = implode(',', $p_ids); // Convert the array to a comma-separated string
+            $sql2 = "INSERT INTO bookings(u_id, p_ids, price) VALUES ('$uid', '$p_ids_string', '$price')";
+            if($conn->query($sql2) === TRUE)
+            {
+              echo "<script>alert('Successfully Paid'); window.location = 'index.php';</script>";
+            }
         }
         else
         {

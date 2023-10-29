@@ -2,8 +2,8 @@
 include './common/CommonAdminHeader.php';
 
 // Query to retrieve data from bookings and user_credentials tables
-$sql = "SELECT b.b_id, b.u_id, b.p_ids, b.price, u.first_name
-        FROM bookings b
+$sql = "SELECT b.b_id, b.u_id, b.p_ids, b.price, b.status, u.first_name
+        FROM history b
         INNER JOIN user_credentials u ON b.u_id = u.u_id";
 
 $result = $conn->query($sql);
@@ -15,21 +15,22 @@ $p_idsarray = array();
 
 echo '<div class="container mt-5 p-5" >';
 echo '<center class="mt-5">
-    <h1><strong>Bookings</strong></h1>
+    <h1><strong>History</strong></h1>
     </center>';
 
 while ($row = $result->fetch_assoc()) {
+    echo '<br>';
     $b_id = $row["b_id"];
     $u_id = $row["u_id"];
     $p_ids = $row["p_ids"];
     $price = $row["price"];
     $p_idsarray[] = $p_ids;
+    $status = $row["status"];
     $user_first_name = $row["first_name"];
-
-    echo '<div class="card mb-4">';
+    echo '<div class="card mb-4 mt-5">';
     echo '<div class="card-header"> Name : ' . $user_first_name . '</div>';
     echo '<div class="card-header"> User Id : ' . $u_id . '</div>';
-    echo '<div class="card-header"> Booking Id : ' . $b_id . '</div>';
+    echo '<div class="card-header"> History Id : ' . $b_id . '</div>';
     echo '<div class="card-body">';
     
     // Display user and booking information
@@ -70,8 +71,16 @@ while ($row = $result->fetch_assoc()) {
     echo '</tbody>
           </table>';
     echo '<center>';
-    echo '<a href="approve.php?booking_id=' . $b_id . '&p_ids=' . $p_ids . '&price=' . $price . '" class="btn btn-dark mr-5">Approve</a>';
-    echo '<a href="reject.php?booking_id='.$b_id.'&p_ids=' . $p_ids . '&price=' . $price . '" class="btn btn-danger mr-5">Reject</a>';
+    if($status == 'APPROVED' || $status == 'approved')
+    {
+        echo '<div class="alert alert-success" role="alert">' . $status . '
+            </div';
+    }
+    else if ($status == 'REJECTED' || $status == 'rejected')
+    {
+        echo '<div class="alert alert-danger" role="alert">' . $status . '
+            </div';
+    }
     echo '</center>';
     echo '</div>'; // card-body
     echo '</div>'; // card
