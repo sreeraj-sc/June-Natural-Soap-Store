@@ -152,7 +152,7 @@ $encodedp_ids = implode(',', $p_ids);
                                 <span class="new__price"><?php echo $total?>rs</span>
                             </li>
                         </ul>
-                        <a href="creditcard.php?pay_total=<?php echo $total; ?>&fromcart=100&p_ids=<?php echo $encodedp_ids; ?>">PROCEED TO CHECKOUT</a>
+                        <a href="creditcard.php?pay_total=<?php echo $total; ?>&fromcart=100&p_ids=<?php echo $encodedp_ids; ?>">PROCEED TO PAY</a>
                     </div>
                 </form>
             </div>

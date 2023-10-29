@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 27, 2023 at 06:15 PM
+-- Generation Time: Oct 29, 2023 at 03:25 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.0.28
 
@@ -20,6 +20,42 @@ SET time_zone = "+00:00";
 --
 -- Database: `june_natural_soap_store`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `bookings`
+--
+
+CREATE TABLE `bookings` (
+  `b_id` int(11) NOT NULL,
+  `u_id` int(11) NOT NULL,
+  `p_ids` varchar(50) NOT NULL,
+  `price` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `history`
+--
+
+CREATE TABLE `history` (
+  `h_id` int(11) NOT NULL,
+  `b_id` int(11) NOT NULL,
+  `u_id` int(11) NOT NULL,
+  `p_ids` varchar(100) NOT NULL,
+  `price` varchar(50) NOT NULL,
+  `status` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `history`
+--
+
+INSERT INTO `history` (`h_id`, `b_id`, `u_id`, `p_ids`, `price`, `status`) VALUES
+(2, 2, 29, '14', '150', 'REJECTED'),
+(3, 3, 29, '15', '200', 'APPROVED');
 
 -- --------------------------------------------------------
 
@@ -111,10 +147,10 @@ CREATE TABLE `user_credentials` (
   `u_id` int(11) NOT NULL,
   `first_name` varchar(30) NOT NULL,
   `last_name` varchar(30) NOT NULL,
-  `contry_code` varchar(5) NOT NULL,
   `mobile_number` varchar(30) NOT NULL,
   `email` varchar(30) NOT NULL,
   `date_of_birth` date NOT NULL,
+  `address` varchar(500) NOT NULL,
   `passphrase` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -122,9 +158,8 @@ CREATE TABLE `user_credentials` (
 -- Dumping data for table `user_credentials`
 --
 
-INSERT INTO `user_credentials` (`u_id`, `first_name`, `last_name`, `contry_code`, `mobile_number`, `email`, `date_of_birth`, `passphrase`) VALUES
-(26, 'sreeraj', 's', '', '3463656', 'sreerajsc5@gmail.com', '0000-00-00', 'fbc6ee8f1f3d04721858f89e32aa85f6'),
-(28, 'hello', 'h', '', '34324234', 'hello@gmail.com', '0000-00-00', '5d41402abc4b2a76b9719d911017c592');
+INSERT INTO `user_credentials` (`u_id`, `first_name`, `last_name`, `mobile_number`, `email`, `date_of_birth`, `address`, `passphrase`) VALUES
+(29, 'sreeraj', 's', '8848066068', 'sreerajsc5@gmail.com', '2023-10-17', 'dwaraka', 'fbc6ee8f1f3d04721858f89e32aa85f6');
 
 -- --------------------------------------------------------
 
@@ -152,7 +187,10 @@ INSERT INTO `user_creditcard` (`u_id`, `cardnumber`, `cardholder`, `cardmonth`, 
 (3, '8438 9723 7483 2742', 'nsdm,vnsdnv', '10', '2032', '231', '200'),
 (3, '3984 3275 2554 5243', 'bjdsvjksdnvlkdnv', '11', '2031', '324', '150'),
 (3, '3434 344234 43243', 'jvksnvkkvn', '10', '2032', '234', '280?fromcart=100'),
-(3, '8752 3598 4543 3344', 'asbcjvkjdvdkvdlkvds', '08', '2033', '434', '280');
+(3, '8752 3598 4543 3344', 'asbcjvkjdvdkvdlkvds', '08', '2033', '434', '280'),
+(29, '9347 5498 5439 5', 'sreeraj', '10', '2031', '321', '200'),
+(29, '2398 4329 8349 3423', 'fdfa', '10', '2033', '312', '150'),
+(29, '4348 5934 5040 9495', 'kscjksdkds', '10', '2031', '321', '200');
 
 -- --------------------------------------------------------
 
@@ -179,6 +217,18 @@ INSERT INTO `user_wishlist` (`u_id`, `p_id`) VALUES
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `bookings`
+--
+ALTER TABLE `bookings`
+  ADD PRIMARY KEY (`b_id`);
+
+--
+-- Indexes for table `history`
+--
+ALTER TABLE `history`
+  ADD PRIMARY KEY (`h_id`);
 
 --
 -- Indexes for table `products`
@@ -216,6 +266,18 @@ ALTER TABLE `user_wishlist`
 --
 
 --
+-- AUTO_INCREMENT for table `bookings`
+--
+ALTER TABLE `bookings`
+  MODIFY `b_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `history`
+--
+ALTER TABLE `history`
+  MODIFY `h_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
@@ -225,7 +287,7 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT for table `user_credentials`
 --
 ALTER TABLE `user_credentials`
-  MODIFY `u_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `u_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
