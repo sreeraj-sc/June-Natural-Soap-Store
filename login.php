@@ -75,10 +75,20 @@ if(isset($_POST['login']))
                     header('Location: add_to_cart.php?product_id=' . $p_id);
                 }
             }
+            else
+            {
+                echo '<script type="text/javascript">
+                            alert("Wrong Password !!!\n Try again !!");
+                            window.location.href = "";
+                            </script>';
+            }
         }
         else
         {
-            echo "invalid password !!!";
+            echo '<script type="text/javascript">
+                    alert("Invalid Email or Password\nTry again with different Email or Password !!!");
+                    window.location.href = "";
+                    </script>';
         }
     }
 }

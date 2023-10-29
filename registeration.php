@@ -24,6 +24,8 @@
     <input type="number" id="phnumber" class="form-control phnumber" name="mobile-number" placeholder="phone number" required autofocus><br>
     <label for="inputEmail" class="sr-only">Email address</label>
     <input type="email" id="inputEmail" class="form-control email" name="email" placeholder="Email address" required autofocus><br>
+    <label for="inputdob" class="sr-only">Date Of Birth</label>
+    <input type="date" id="inputdob" class="form-control dob" name="dob" placeholder="Date Of Birth" required autofocus><br>
     <label for="address" class="sr-only">Address</label>
     <textarea id="address" class="form-control" name="address" rows="4" placeholder="address"></textarea><br>
     <label for="inputPassword" class="sr-only">Password</label>
@@ -36,7 +38,8 @@
         </label>
     </div>
     <button class="btn btn-lg btn-dark btn-block form-control" id="login" type="submit" name="submit">Sign in</button>
-    </form>
+    </form><br>
+    <p>Already Have An Account ? <a href="login.php">Log in</a></p>
     </div>
     </center>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
@@ -53,40 +56,56 @@
         //$contry_code = $_POST['contry-code'];
         $mobile_number = $_POST['mobile-number'];
         $email = $_POST['email'];
-        //$date_of_birth = $_POST['dob'];
+        $date_of_birth = $_POST['dob'];
         $address = $_POST['address'];
         $password = $_POST['pswd'];
         $pass_con = $_POST['confirmpwd'];
         if($password == $pass_con)
         {
             $pass_hashed = md5($password);
-            $sql = "INSERT INTO user_credentials(first_name, last_name, contry_code, mobile_number, email, date_of_birth, passphrase) VALUES ('$first_name', '$last_name', '$contry_code', '$mobile_number', '$email', '$date_of_birth', '$pass_hashed')";
-            if($conn->query($sql) === TRUE)
+            if(strlen($mobile_number) == 10)
             {
-                $_SESSION['username'] = $first_name;
-                $qry = "SELECT u_id, first_name FROM user_credentials";
-                $res = $conn->query($qry);
-                while($row = $res->fetch_assoc())
+                $stmt = $conn->prepare("INSERT INTO user_credentials (first_name, last_name, mobile_number, email, date_of_birth, address, passphrase) VALUES (?, ?, ?, ?, ?, ?, ?)");
+                if (!$stmt) {
+                    die("Error preparing the statement: " . $conn->error);
+                }
+                $stmt->bind_param("sssssss", $first_name, $last_name, $mobile_number, $email, $date_of_birth, $address, $pass_hashed);    
+                if ($stmt->execute())
                 {
-                    if($row['first_name'] == $first_name)
+                    $_SESSION['username'] = $first_name;
+                    $qry = "SELECT u_id, first_name FROM user_credentials";
+                    $res = $conn->query($qry);
+                    if($row = $res->fetch_assoc())
                     {
                         echo "success";
                         $_SESSION['uid'] = $row['u_id'];
+                        $_SESSION['uname'] = $first_name;
+                        echo '<script type="text/javascript">
+                            alert("Registration SuccessFull\nHello ' . $first_name . '");
+                            window.location.href = "index.php";
+                            </script>';
+                    }
+                    else
+                    {
+                        echo '<script type="text/javascript">
+                            alert("Registration UnsuccessFull\nTry Using With Different Email ID !!!");
+                            window.location.href = "";
+                            </script>';
                     }
                 }
-                header("Location: index.php");
-                exit();
             }
-            else
+            else if(strlen($mobile_number) > 10 || strlen($mobile_number) < 10)
             {
-                echo "failed";
+                echo '<script type="text/javascript">
+                            alert("Mobile number Must be 10 digits !");
+                            </script>';
             }
         }
         else
         {
-            echo "missmatch";
-            echo '<script src="script/script.js"></script>';
-            echo '<script type="text/javascript">password_missmatch();</script>';
+            echo '<script type="text/javascript">
+                    alert("Password MissMatch !");
+                    </script>';
         }
         $conn->close();
     }
