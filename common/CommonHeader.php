@@ -117,7 +117,7 @@
               </svg>
             </a>
 
-            <a href="wishlist.php" class="icon__item" id="wishlist-btn" onclick="">
+            <a href="wishlist.php" class="icon__item" id="wishlist-btn" >
               <svg class="icon__user">
                 <use xlink:href="./images/sprite.svg#icon-heart-o"></use>
               </svg>

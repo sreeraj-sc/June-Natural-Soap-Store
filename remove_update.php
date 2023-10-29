@@ -29,7 +29,7 @@ while($row = $result->fetch_assoc())
         echo '<h5 class="card-title">' . $soap_name . '</h5>';
         echo '<h4>' . $soap_price . 'rs</h4>';
         echo '<center>';
-        echo '<a href="remove.php?product_id='.$soap_id.'" class="btn btn-dark mr-5">Remove</a>';
+        echo '<a href="remove.php?product_id='.$soap_id.'" class="btn btn-danger mr-5">Remove</a>';
         echo '</center>';
         echo '</div>';
         echo '</div>';
