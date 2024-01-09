@@ -629,7 +629,7 @@ else {
       </div>
       <div class="popup__right">
         <div class="right__content">
-          <h1>Get Discount <span>30%</span> Off</h1>
+          <h1>Get New Year Discount <span>30%</span> Off</h1>
           <p>Sign up to our updates and save 30% for you next purchase. No spam, we promise!
           </p>
           <form action="" method="post">
