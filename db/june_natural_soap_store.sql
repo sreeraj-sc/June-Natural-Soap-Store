@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 09, 2024 at 12:39 PM
+-- Generation Time: Jan 10, 2024 at 04:27 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.0.28
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `june_natural_soap_store`
+-- Database: `June_Natural_Soap_Store`
 --
 
 -- --------------------------------------------------------
