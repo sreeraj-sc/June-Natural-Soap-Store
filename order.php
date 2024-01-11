@@ -1,6 +1,6 @@
 <?php
     ob_start();
-    include './common/CommonHeader.php';
+    include './common/CommonAdminHeader.php';
     include './common/db_connection.php';
     if (!isset($_SESSION['uid'])) {
         $_SESSION['p_no'] = 0;

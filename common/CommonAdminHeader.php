@@ -68,6 +68,9 @@
 
           <div class="nav__menu">
             <ul class="nav__list">
+            <li class="nav__item">
+                <a href="add_product.php" class="nav__link scroll-link pr-5">Home</a>
+              </li>
               <li class="nav__item">
                 <a href="add_product.php" class="nav__link scroll-link pr-5">add product</a>
               </li>
