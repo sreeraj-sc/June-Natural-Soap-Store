@@ -96,16 +96,13 @@
                 <a href="index.php" class="nav__link scroll-link">Home</a>
               </li>
               <li class="nav__item">
-                <a href="index.php#category" class="nav__link scroll-link">Category</a>
+                <a href="index.php#latest" class="nav__link scroll-link">Category</a>
               </li>
               <li class="nav__item">
                 <a href="index.php#news" class="nav__link scroll-link">Blog</a>
               </li>
               <li class="nav__item">
                 <a href="index.php#contact" class="nav__link scroll-link">Contact</a>
-              </li>
-              <li class="nav__item">
-                <a href="profile.php" class="nav__link scroll-link">Profile</a>
               </li>
               <li class="nav__item">
                 <a href="logout.php" class="nav__link scroll-link">log out</a>
