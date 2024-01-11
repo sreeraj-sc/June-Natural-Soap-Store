@@ -35,8 +35,8 @@
                     else {
                         echo "No bookings found."; 
                     } 
-                ?><br>
-                <a href="booking.php"><button class="hero__btn">Show Bookings</button></a>
+                ?><br><br>
+                <a href="booking.php"><button class="">Show Bookings</button></a>
             </div>
         </div>
     </center>
