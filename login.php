@@ -51,7 +51,7 @@ if(isset($_POST['login']))
     $pass_hashed = md5($passphrase);
     if($email == "admin@gmail.com" && $passphrase == "admin")
     {
-        header('Location: add_product.php');
+        header('Location: order.php');
     }
     else
     {
