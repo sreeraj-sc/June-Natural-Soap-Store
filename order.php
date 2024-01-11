@@ -18,19 +18,6 @@
       margin: 10rem;
       width: 60rem;
     }
-    input
-    {
-      margin-left: 5rem;
-    }
-    select
-    {
-      margin-left: 5rem;
-    }
-    .image
-    {
-      width:5rem;
-      height: 5rem;
-    }
 </style>
 </head>
 <body class="text-center">
